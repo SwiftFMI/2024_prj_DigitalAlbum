@@ -11,7 +11,16 @@ struct AlbumView: View {
     let album: Album
 
     var body: some View {
-        Text(album.name)
+        VStack {
+            ZStack {
+                RoundedRectangle(cornerRadius: 4)
+                    .fill(.blue)
+                Image(systemName: "photo")
+                    .foregroundStyle(.white)
+            }
+            Text(album.name)
+        }
+        .frame(minHeight: 200)
     }
 }
 

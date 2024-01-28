@@ -12,12 +12,20 @@ struct HomeScreen: View {
     @State private var albumName = ""
     @State private var albums: [Album] = []
 
+    private let columns = [
+        GridItem(.flexible(), spacing: 16),
+        GridItem(.flexible(), spacing: 16)
+    ]
+
     var body: some View {
-        VStack {
-            ForEach(albums) { album in
-                AlbumView(album: album)
+        ScrollView {
+            LazyVGrid(columns: columns, spacing: 16) {
+                ForEach(albums) { album in
+                    AlbumView(album: album)
+                }
             }
         }
+        .padding()
         .navigationTitle("Your Albums")
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
