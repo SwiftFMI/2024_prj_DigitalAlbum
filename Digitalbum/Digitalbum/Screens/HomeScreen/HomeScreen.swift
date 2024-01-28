@@ -21,7 +21,9 @@ struct HomeScreen: View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 16) {
                 ForEach(albums) { album in
-                    AlbumView(album: album)
+                    NavigationLink(destination: EditAlbumScreen(album: album)) {
+                        AlbumView(album: album)
+                    }
                 }
             }
         }
@@ -29,11 +31,7 @@ struct HomeScreen: View {
         .navigationTitle("Your Albums")
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button {
-                    showAlert.toggle()
-                } label: {
-                    Image(systemName: "plus")
-                }
+                NewAlbumButton(showAlert: $showAlert)
             }
         }
         .alert(
@@ -44,7 +42,7 @@ struct HomeScreen: View {
                 albumName = ""
             }
             Button("Create") {
-                albums.append(Album(name: albumName))
+                albums.append(.init(name: albumName))
                 albumName = ""
             }
             TextField("Album Name", text: $albumName)
