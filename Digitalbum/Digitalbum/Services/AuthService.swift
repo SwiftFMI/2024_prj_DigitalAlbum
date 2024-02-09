@@ -29,6 +29,13 @@ struct AuthService {
         }
     }
 
+    @MainActor
+    func signIn(email: String, password: String) {
+        Task {
+            try? await auth.signIn(withEmail: email, password: password)
+        }
+    }
+
     func signUp(email: String, password: String, completion: @escaping () -> Void ) {
         auth.createUser(withEmail: email,
                         password: password) {  result, error in

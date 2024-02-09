@@ -11,53 +11,54 @@ struct SignInScreen: View {
     @State private var email = ""
     @State private var password = ""
     @State private var presentHomeScreen = false
+    @State private var presentSignUpScreen = false
+    @State private var showWrongCredentialsAlert = false
 
     var body: some View {
         VStack(spacing: 100) {
             Image("AppLogo")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 150, height: 150)
+                .frame(width: 200, height: 200)
 
             VStack {
-                TextField("Email Address", text: $email)
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
-                    .padding()
-                    .background(Color(.secondarySystemBackground))
-
-                SecureField("Password", text: $password)
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
-                    .padding()
-                    .background(Color(.secondarySystemBackground))
-
-                Button(action: {
+                EmailTextField(email: $email)
+                PasswordTextField(password: $password)
+                AuthButton(title: "Sing In") {
                     guard !email.isEmpty, !password.isEmpty else {
                         return
                     }
-                    AuthService.shared.signIn(email: email, password: password) {
-                        DispatchQueue.main.async {
-                            presentHomeScreen = true
-                        }
+
+                    AuthService.shared.signIn(email: email, password: password)
+
+                    if AuthService.shared.userAuthenticated {
+                        presentHomeScreen.toggle()
+                    } else {
+                        showWrongCredentialsAlert.toggle()
                     }
-                }, label: {
-                    Text("Sign In")
-                        .foregroundColor(Color.white)
-                        .frame(width: 200, height: 50)
-                        .background(Color.blue)
-                        .cornerRadius(8)
-                })
-                NavigationLink("Create Account", destination: SignUpScreen())
-                    .padding()
+                }
+                Button(action: { presentSignUpScreen.toggle() }) {
+                    Text("Create account")
+                }
             }
             .padding()
+
             Spacer()
         }
-        .sheet(isPresented: $presentHomeScreen) {
-            HomeScreen()
+        .fullScreenCover(isPresented: $presentHomeScreen) {
+            NavigationStack {
+                HomeScreen()
+            }
         }
-
+        .sheet(isPresented: $presentSignUpScreen) {
+            SignUpScreen()
+        }
+        .alert(isPresented: $showWrongCredentialsAlert) {
+            Alert(
+                title: Text("Wrong Email or Passowrd"),
+                message: nil,
+                dismissButton: .default(Text("Try Again")))
+        }
     }
 }
 
