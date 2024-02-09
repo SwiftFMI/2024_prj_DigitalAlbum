@@ -7,12 +7,11 @@
 
 import SwiftUI
 
-// TODO: Add A logout button
-
 struct HomeScreen: View {
-    @State private var showAlert = false
     @State private var albumName = ""
     @State private var albums: [Album] = []
+    @State private var showAlert = false
+    @State private var presentSignInScreen = false
 
     private let columns = [
         GridItem(.flexible(), spacing: 16),
@@ -35,6 +34,10 @@ struct HomeScreen: View {
             ToolbarItem(placement: .topBarTrailing) {
                 NewAlbumButton(showAlert: $showAlert)
             }
+            // TODO: Move this Button to the Profile Screen, once it's created
+            ToolbarItem(placement: .topBarLeading) {
+                SignOutButton(presentSignInScreen: $presentSignInScreen)
+            }
         }
         .alert(
             Text("Create New Album"),
@@ -48,6 +51,9 @@ struct HomeScreen: View {
                 albumName = ""
             }
             TextField("Album Name", text: $albumName)
+        }
+        .fullScreenCover(isPresented: $presentSignInScreen) {
+            SignInScreen()
         }
     }
 }

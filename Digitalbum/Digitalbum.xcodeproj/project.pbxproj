@@ -73,6 +73,7 @@
 		CA127CB02B76A503008B502A /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CAF2B76A503008B502A /* EmailTextField.swift */; };
 		CA127CB22B76A50A008B502A /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CB12B76A50A008B502A /* PasswordTextField.swift */; };
 		CA127CB42B76A518008B502A /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CB32B76A518008B502A /* AuthButton.swift */; };
+		CA127CB62B76AAA6008B502A /* SignOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CB52B76AAA6008B502A /* SignOutButton.swift */; };
 		CAA9D67D2B66940A0070D58D /* DigitalbumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9D67C2B66940A0070D58D /* DigitalbumApp.swift */; };
 		CAA9D67F2B66940A0070D58D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9D67E2B66940A0070D58D /* ContentView.swift */; };
 		CAA9D6812B66940B0070D58D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAA9D6802B66940B0070D58D /* Assets.xcassets */; };
@@ -93,6 +94,7 @@
 		CA127CAF2B76A503008B502A /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		CA127CB12B76A50A008B502A /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		CA127CB32B76A518008B502A /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
+		CA127CB52B76AAA6008B502A /* SignOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutButton.swift; sourceTree = "<group>"; };
 		CAA9D6792B66940A0070D58D /* Digitalbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Digitalbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA9D67C2B66940A0070D58D /* DigitalbumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalbumApp.swift; sourceTree = "<group>"; };
 		CAA9D67E2B66940A0070D58D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			children = (
 				CAA9D6912B66B32A0070D58D /* AlbumView.swift */,
 				CAA9D6952B66B9540070D58D /* NewAlbumButton.swift */,
+				CA127CB52B76AAA6008B502A /* SignOutButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				CAA9D67F2B66940A0070D58D /* ContentView.swift in Sources */,
 				CA127CB42B76A518008B502A /* AuthButton.swift in Sources */,
 				CAA9D6942B66B8870070D58D /* EditAlbumScreen.swift in Sources */,
+				CA127CB62B76AAA6008B502A /* SignOutButton.swift in Sources */,
 				CA127CAC2B769EE6008B502A /* SignUpScreen.swift in Sources */,
 				A4FBE1662B7572C000D2426A /* SignInScreen.swift in Sources */,
 				CAA9D6962B66B9540070D58D /* NewAlbumButton.swift in Sources */,

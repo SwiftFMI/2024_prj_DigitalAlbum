@@ -8,7 +8,7 @@
 import FirebaseAuth
 
 struct AuthService {
-    // Singleton instance
+    /// Singleton instance
     static let shared = AuthService()
 
     private let auth = Auth.auth()
@@ -33,8 +33,8 @@ struct AuthService {
         }
     }
 
-    func signout(completion: @escaping () -> Void) {
+    @MainActor
+    func signUserOut() {
         try? auth.signOut()
-        completion()
     }
 }
