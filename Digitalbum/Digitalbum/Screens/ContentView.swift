@@ -8,19 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    let authService = AuthService()
-
     var body: some View {
-        if authService.userAuthenticated {
+        if AuthService.shared.userAuthenticated {
             NavigationStack {
                 HomeScreen()
             }
+
         } else {
             SignInScreen()
         }
     }
-}
-
-#Preview {
-    ContentView()
 }

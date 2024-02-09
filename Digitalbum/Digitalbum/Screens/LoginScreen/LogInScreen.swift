@@ -6,47 +6,6 @@
 //
 
 import SwiftUI
-import FirebaseAuth
-
-struct AuthService {
-    private let auth = Auth.auth()
-
-    var userAuthenticated: Bool {
-        return auth.currentUser != nil
-    }
-
-    func signIn(email: String, password: String, completion: @escaping () -> Void) {
-        auth.signIn(withEmail: email,
-                    password: password) { result, error in
-            guard result != nil, error == nil else {
-                return
-            }
-            completion()
-        }
-    }
-
-    func signUp(email: String, password: String, completion: @escaping () -> Void ) {
-        auth.createUser(withEmail: email,
-                        password: password) {  result, error in
-            guard result != nil, error == nil else {
-                return
-            }
-            completion()
-        }
-    }
-
-    func signout(completion: @escaping () -> Void) {
-        try? auth.signOut()
-        completion()
-    }
-}
-
-class LoginViewModel: ObservableObject {
-
-    @Published var signedIn = false
-
-
-}
 
 struct SignInScreen: View {
     @State private var email = ""
