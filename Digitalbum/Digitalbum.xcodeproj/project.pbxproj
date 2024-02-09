@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A4C9B09E2B76721A0006429F /* LogoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C9B09D2B76721A0006429F /* LogoutButton.swift */; };
-		A4FBE1662B7572C000D2426A /* LogInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE1652B7572C000D2426A /* LogInScreen.swift */; };
+		A4FBE1662B7572C000D2426A /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE1652B7572C000D2426A /* SignInScreen.swift */; };
 		A4FBE16B2B7575C200D2426A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A4FBE16A2B7575C200D2426A /* FirebaseAnalytics */; };
 		A4FBE16D2B7575C200D2426A /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = A4FBE16C2B7575C200D2426A /* FirebaseAnalyticsOnDeviceConversion */; };
 		A4FBE16F2B7575C200D2426A /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A4FBE16E2B7575C200D2426A /* FirebaseAnalyticsSwift */; };
@@ -70,6 +70,7 @@
 		A4FBE1DF2B757C4E00D2426A /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A4FBE1DE2B757C4E00D2426A /* FirebaseStorageCombine-Community */; };
 		CA127CA72B769C7E008B502A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA127CA62B769C7E008B502A /* GoogleService-Info.plist */; };
 		CA127CAA2B769E97008B502A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CA92B769E97008B502A /* AuthService.swift */; };
+		CA127CAC2B769EE6008B502A /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CAB2B769EE6008B502A /* SignUpScreen.swift */; };
 		CAA9D67D2B66940A0070D58D /* DigitalbumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9D67C2B66940A0070D58D /* DigitalbumApp.swift */; };
 		CAA9D67F2B66940A0070D58D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9D67E2B66940A0070D58D /* ContentView.swift */; };
 		CAA9D6812B66940B0070D58D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAA9D6802B66940B0070D58D /* Assets.xcassets */; };
@@ -84,9 +85,10 @@
 
 /* Begin PBXFileReference section */
 		A4C9B09D2B76721A0006429F /* LogoutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutButton.swift; sourceTree = "<group>"; };
-		A4FBE1652B7572C000D2426A /* LogInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInScreen.swift; sourceTree = "<group>"; };
+		A4FBE1652B7572C000D2426A /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
 		CA127CA62B769C7E008B502A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA127CA92B769E97008B502A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		CA127CAB2B769EE6008B502A /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
 		CAA9D6792B66940A0070D58D /* Digitalbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Digitalbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA9D67C2B66940A0070D58D /* DigitalbumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalbumApp.swift; sourceTree = "<group>"; };
 		CAA9D67E2B66940A0070D58D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -170,12 +172,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A4FBE1582B75637E00D2426A /* LoginScreen */ = {
+		A4FBE1582B75637E00D2426A /* AuthenticationFlow */ = {
 			isa = PBXGroup;
 			children = (
-				A4FBE1652B7572C000D2426A /* LogInScreen.swift */,
+				A4FBE1652B7572C000D2426A /* SignInScreen.swift */,
+				CA127CAB2B769EE6008B502A /* SignUpScreen.swift */,
 			);
-			path = LoginScreen;
+			path = AuthenticationFlow;
 			sourceTree = "<group>";
 		};
 		CA127CA82B769E84008B502A /* Services */ = {
@@ -248,7 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				CAA9D67E2B66940A0070D58D /* ContentView.swift */,
-				A4FBE1582B75637E00D2426A /* LoginScreen */,
+				A4FBE1582B75637E00D2426A /* AuthenticationFlow */,
 				CAA9D6982B66B9DF0070D58D /* EditAlbumScreen */,
 				CAA9D6972B66B9CF0070D58D /* HomeScreen */,
 			);
@@ -424,8 +427,9 @@
 			files = (
 				CAA9D67F2B66940A0070D58D /* ContentView.swift in Sources */,
 				CAA9D6942B66B8870070D58D /* EditAlbumScreen.swift in Sources */,
+				CA127CAC2B769EE6008B502A /* SignUpScreen.swift in Sources */,
 				A4C9B09E2B76721A0006429F /* LogoutButton.swift in Sources */,
-				A4FBE1662B7572C000D2426A /* LogInScreen.swift in Sources */,
+				A4FBE1662B7572C000D2426A /* SignInScreen.swift in Sources */,
 				CAA9D6962B66B9540070D58D /* NewAlbumButton.swift in Sources */,
 				CAA9D67D2B66940A0070D58D /* DigitalbumApp.swift in Sources */,
 				CAA9D68E2B66AF220070D58D /* HomeScreen.swift in Sources */,
