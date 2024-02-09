@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct LogoutButton: View {
-    @EnvironmentObject var viewModel: LoginViewModel
-
+    private let authService = AuthService()
     var body: some View {
         Button {
-            viewModel.signedIn = false
-            SignInView()
+            authService.signout {
+                
+            }
         } label: {
             Text("🙋‍♂️")
         }

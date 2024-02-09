@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A4C9B09E2B76721A0006429F /* LogoutButtonTestingPRPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C9B09D2B76721A0006429F /* LogoutButtonTestingPRPS.swift */; };
-		A4FBE1662B7572C000D2426A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE1652B7572C000D2426A /* LoginView.swift */; };
+		A4FBE1662B7572C000D2426A /* LogInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE1652B7572C000D2426A /* LogInScreen.swift */; };
 		A4FBE1682B75753300D2426A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4FBE1672B75753300D2426A /* GoogleService-Info.plist */; };
 		A4FBE16B2B7575C200D2426A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A4FBE16A2B7575C200D2426A /* FirebaseAnalytics */; };
 		A4FBE16D2B7575C200D2426A /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = A4FBE16C2B7575C200D2426A /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -83,7 +83,7 @@
 
 /* Begin PBXFileReference section */
 		A4C9B09D2B76721A0006429F /* LogoutButtonTestingPRPS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutButtonTestingPRPS.swift; sourceTree = "<group>"; };
-		A4FBE1652B7572C000D2426A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A4FBE1652B7572C000D2426A /* LogInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInScreen.swift; sourceTree = "<group>"; };
 		A4FBE1672B75753300D2426A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CAA9D6792B66940A0070D58D /* Digitalbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Digitalbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA9D67C2B66940A0070D58D /* DigitalbumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalbumApp.swift; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 		A4FBE1582B75637E00D2426A /* LoginScreen */ = {
 			isa = PBXGroup;
 			children = (
-				A4FBE1652B7572C000D2426A /* LoginView.swift */,
+				A4FBE1652B7572C000D2426A /* LogInScreen.swift */,
 			);
 			path = LoginScreen;
 			sourceTree = "<group>";
@@ -236,8 +236,8 @@
 		CAA9D6992B66B9F20070D58D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				A4FBE1582B75637E00D2426A /* LoginScreen */,
 				CAA9D67E2B66940A0070D58D /* ContentView.swift */,
+				A4FBE1582B75637E00D2426A /* LoginScreen */,
 				CAA9D6982B66B9DF0070D58D /* EditAlbumScreen */,
 				CAA9D6972B66B9CF0070D58D /* HomeScreen */,
 			);
@@ -414,7 +414,7 @@
 				CAA9D67F2B66940A0070D58D /* ContentView.swift in Sources */,
 				CAA9D6942B66B8870070D58D /* EditAlbumScreen.swift in Sources */,
 				A4C9B09E2B76721A0006429F /* LogoutButtonTestingPRPS.swift in Sources */,
-				A4FBE1662B7572C000D2426A /* LoginView.swift in Sources */,
+				A4FBE1662B7572C000D2426A /* LogInScreen.swift in Sources */,
 				CAA9D6962B66B9540070D58D /* NewAlbumButton.swift in Sources */,
 				CAA9D67D2B66940A0070D58D /* DigitalbumApp.swift in Sources */,
 				CAA9D68E2B66AF220070D58D /* HomeScreen.swift in Sources */,

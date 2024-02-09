@@ -23,11 +23,7 @@ struct DigitalbumApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
-            let loginViewModel = LoginViewModel()
-            NavigationView {
-                LoginView()
-                    .environmentObject(loginViewModel)
-            }
+            ContentView()
         }
     }
 }
