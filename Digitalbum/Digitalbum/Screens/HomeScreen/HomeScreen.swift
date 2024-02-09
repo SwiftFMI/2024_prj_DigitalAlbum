@@ -33,6 +33,9 @@ struct HomeScreen: View {
             ToolbarItem(placement: .topBarTrailing) {
                 NewAlbumButton(showAlert: $showAlert)
             }
+            ToolbarItem(placement: .topBarLeading){
+            LogoutButton()
+            }
         }
         .alert(
             Text("Create New Album"),
