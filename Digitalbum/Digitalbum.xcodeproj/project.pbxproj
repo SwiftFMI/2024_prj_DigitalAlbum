@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A4C9B09E2B76721A0006429F /* LogoutButtonTestingPRPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C9B09D2B76721A0006429F /* LogoutButtonTestingPRPS.swift */; };
+		A4C9B09E2B76721A0006429F /* LogoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C9B09D2B76721A0006429F /* LogoutButton.swift */; };
 		A4FBE1662B7572C000D2426A /* LogInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE1652B7572C000D2426A /* LogInScreen.swift */; };
-		A4FBE1682B75753300D2426A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4FBE1672B75753300D2426A /* GoogleService-Info.plist */; };
 		A4FBE16B2B7575C200D2426A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A4FBE16A2B7575C200D2426A /* FirebaseAnalytics */; };
 		A4FBE16D2B7575C200D2426A /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = A4FBE16C2B7575C200D2426A /* FirebaseAnalyticsOnDeviceConversion */; };
 		A4FBE16F2B7575C200D2426A /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A4FBE16E2B7575C200D2426A /* FirebaseAnalyticsSwift */; };
@@ -69,6 +68,7 @@
 		A4FBE1DB2B757C4E00D2426A /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A4FBE1DA2B757C4E00D2426A /* FirebaseRemoteConfigSwift */; };
 		A4FBE1DD2B757C4E00D2426A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A4FBE1DC2B757C4E00D2426A /* FirebaseStorage */; };
 		A4FBE1DF2B757C4E00D2426A /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A4FBE1DE2B757C4E00D2426A /* FirebaseStorageCombine-Community */; };
+		CA127CA72B769C7E008B502A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA127CA62B769C7E008B502A /* GoogleService-Info.plist */; };
 		CAA9D67D2B66940A0070D58D /* DigitalbumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9D67C2B66940A0070D58D /* DigitalbumApp.swift */; };
 		CAA9D67F2B66940A0070D58D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9D67E2B66940A0070D58D /* ContentView.swift */; };
 		CAA9D6812B66940B0070D58D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAA9D6802B66940B0070D58D /* Assets.xcassets */; };
@@ -82,9 +82,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A4C9B09D2B76721A0006429F /* LogoutButtonTestingPRPS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutButtonTestingPRPS.swift; sourceTree = "<group>"; };
+		A4C9B09D2B76721A0006429F /* LogoutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutButton.swift; sourceTree = "<group>"; };
 		A4FBE1652B7572C000D2426A /* LogInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInScreen.swift; sourceTree = "<group>"; };
-		A4FBE1672B75753300D2426A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CA127CA62B769C7E008B502A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CAA9D6792B66940A0070D58D /* Digitalbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Digitalbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA9D67C2B66940A0070D58D /* DigitalbumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalbumApp.swift; sourceTree = "<group>"; };
 		CAA9D67E2B66940A0070D58D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -179,8 +179,8 @@
 		CAA9D6702B66940A0070D58D = {
 			isa = PBXGroup;
 			children = (
+				CA127CA62B769C7E008B502A /* GoogleService-Info.plist */,
 				CAA9D68B2B6698470070D58D /* .swiftlint.yml */,
-				A4FBE1672B75753300D2426A /* GoogleService-Info.plist */,
 				CAA9D67B2B66940A0070D58D /* Digitalbum */,
 				CAA9D67A2B66940A0070D58D /* Products */,
 			);
@@ -220,7 +220,7 @@
 				CAA9D68D2B66AF220070D58D /* HomeScreen.swift */,
 				CAA9D6912B66B32A0070D58D /* AlbumView.swift */,
 				CAA9D6952B66B9540070D58D /* NewAlbumButton.swift */,
-				A4C9B09D2B76721A0006429F /* LogoutButtonTestingPRPS.swift */,
+				A4C9B09D2B76721A0006429F /* LogoutButton.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -376,7 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAA9D68C2B6698470070D58D /* .swiftlint.yml in Resources */,
-				A4FBE1682B75753300D2426A /* GoogleService-Info.plist in Resources */,
+				CA127CA72B769C7E008B502A /* GoogleService-Info.plist in Resources */,
 				CAA9D6842B66940B0070D58D /* Preview Assets.xcassets in Resources */,
 				CAA9D6812B66940B0070D58D /* Assets.xcassets in Resources */,
 			);
@@ -413,7 +413,7 @@
 			files = (
 				CAA9D67F2B66940A0070D58D /* ContentView.swift in Sources */,
 				CAA9D6942B66B8870070D58D /* EditAlbumScreen.swift in Sources */,
-				A4C9B09E2B76721A0006429F /* LogoutButtonTestingPRPS.swift in Sources */,
+				A4C9B09E2B76721A0006429F /* LogoutButton.swift in Sources */,
 				A4FBE1662B7572C000D2426A /* LogInScreen.swift in Sources */,
 				CAA9D6962B66B9540070D58D /* NewAlbumButton.swift in Sources */,
 				CAA9D67D2B66940A0070D58D /* DigitalbumApp.swift in Sources */,

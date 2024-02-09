@@ -12,7 +12,7 @@ struct LogoutButton: View {
     var body: some View {
         Button {
             authService.signout {
-                
+
             }
         } label: {
             Text("🙋‍♂️")

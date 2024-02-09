@@ -33,7 +33,7 @@ struct HomeScreen: View {
             ToolbarItem(placement: .topBarTrailing) {
                 NewAlbumButton(showAlert: $showAlert)
             }
-            ToolbarItem(placement: .topBarLeading){
+            ToolbarItem(placement: .topBarLeading) {
             LogoutButton()
             }
         }
