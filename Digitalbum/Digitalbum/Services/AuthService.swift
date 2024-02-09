@@ -19,16 +19,6 @@ struct AuthService {
         return auth.currentUser != nil
     }
 
-    func signIn(email: String, password: String, completion: @escaping () -> Void) {
-        auth.signIn(withEmail: email,
-                    password: password) { result, error in
-            guard result != nil, error == nil else {
-                return
-            }
-            completion()
-        }
-    }
-
     @MainActor
     func signIn(email: String, password: String) {
         Task {
@@ -36,13 +26,10 @@ struct AuthService {
         }
     }
 
-    func signUp(email: String, password: String, completion: @escaping () -> Void ) {
-        auth.createUser(withEmail: email,
-                        password: password) {  result, error in
-            guard result != nil, error == nil else {
-                return
-            }
-            completion()
+    @MainActor
+    func signUp(email: String, password: String) {
+        Task {
+            try? await auth.createUser(withEmail: email, password: password)
         }
     }
 

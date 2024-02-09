@@ -15,7 +15,7 @@ struct SignInScreen: View {
     @State private var showWrongCredentialsAlert = false
 
     var body: some View {
-        VStack(spacing: 100) {
+        VStack(spacing: 15) {
             Image("AppLogo")
                 .resizable()
                 .scaledToFit()
@@ -37,6 +37,7 @@ struct SignInScreen: View {
                         showWrongCredentialsAlert.toggle()
                     }
                 }
+                .padding()
                 Button(action: { presentSignUpScreen.toggle() }) {
                     Text("Create account")
                 }

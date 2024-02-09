@@ -20,5 +20,5 @@ struct PasswordTextField: View {
 }
 
 #Preview {
-    PasswordTextField(.constant("coolpassword"))
+    PasswordTextField(password: .constant("coolpassword"))
 }

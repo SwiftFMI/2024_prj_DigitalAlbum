@@ -20,5 +20,5 @@ struct EmailTextField: View {
 }
 
 #Preview {
-    EmailTextField(.constant("myemail@hotmail.com"))
+    EmailTextField(email: .constant("myemail@hotmail.com"))
 }

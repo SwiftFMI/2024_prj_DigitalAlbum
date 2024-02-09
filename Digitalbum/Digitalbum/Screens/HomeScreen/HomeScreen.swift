@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// TODO: Add A logout button
+
 struct HomeScreen: View {
     @State private var showAlert = false
     @State private var albumName = ""
@@ -32,9 +34,6 @@ struct HomeScreen: View {
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 NewAlbumButton(showAlert: $showAlert)
-            }
-            ToolbarItem(placement: .topBarLeading) {
-            LogoutButton()
             }
         }
         .alert(
