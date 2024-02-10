@@ -11,13 +11,15 @@ struct SignOutButton: View {
     @Binding var presentSignInScreen: Bool
 
     var body: some View {
-        Button(action: {
+        Button {
             AuthService.shared.signUserOut()
             presentSignInScreen.toggle()
 
-        }, label: {
-            Text("Sing Out")
-        })
+        } label: {
+            Text("Sign Out")
+                .foregroundStyle(.red)
+        }
+
     }
 }
 

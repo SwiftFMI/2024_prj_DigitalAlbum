@@ -16,7 +16,11 @@ struct AuthService {
     private init() {}
 
     var userAuthenticated: Bool {
-        return auth.currentUser != nil
+        auth.currentUser != nil
+    }
+
+    var currentUserEmail: String {
+        auth.currentUser?.email ?? "unknown"
     }
 
     @MainActor

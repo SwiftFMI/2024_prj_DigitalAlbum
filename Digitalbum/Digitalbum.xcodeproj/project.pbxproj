@@ -74,6 +74,8 @@
 		CA127CB22B76A50A008B502A /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CB12B76A50A008B502A /* PasswordTextField.swift */; };
 		CA127CB42B76A518008B502A /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CB32B76A518008B502A /* AuthButton.swift */; };
 		CA127CB62B76AAA6008B502A /* SignOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CB52B76AAA6008B502A /* SignOutButton.swift */; };
+		CA127CB92B777B88008B502A /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CB82B777B88008B502A /* ProfileScreen.swift */; };
+		CA127CBB2B777B9E008B502A /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CBA2B777B9E008B502A /* ProfileButton.swift */; };
 		CAA9D67D2B66940A0070D58D /* DigitalbumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9D67C2B66940A0070D58D /* DigitalbumApp.swift */; };
 		CAA9D67F2B66940A0070D58D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9D67E2B66940A0070D58D /* ContentView.swift */; };
 		CAA9D6812B66940B0070D58D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAA9D6802B66940B0070D58D /* Assets.xcassets */; };
@@ -95,6 +97,8 @@
 		CA127CB12B76A50A008B502A /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		CA127CB32B76A518008B502A /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		CA127CB52B76AAA6008B502A /* SignOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutButton.swift; sourceTree = "<group>"; };
+		CA127CB82B777B88008B502A /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		CA127CBA2B777B9E008B502A /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButton.swift; sourceTree = "<group>"; };
 		CAA9D6792B66940A0070D58D /* Digitalbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Digitalbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA9D67C2B66940A0070D58D /* DigitalbumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalbumApp.swift; sourceTree = "<group>"; };
 		CAA9D67E2B66940A0070D58D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -201,7 +205,7 @@
 			children = (
 				CAA9D6912B66B32A0070D58D /* AlbumView.swift */,
 				CAA9D6952B66B9540070D58D /* NewAlbumButton.swift */,
-				CA127CB52B76AAA6008B502A /* SignOutButton.swift */,
+				CA127CBA2B777B9E008B502A /* ProfileButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -212,6 +216,23 @@
 				CA127CAF2B76A503008B502A /* EmailTextField.swift */,
 				CA127CB12B76A50A008B502A /* PasswordTextField.swift */,
 				CA127CB32B76A518008B502A /* AuthButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		CA127CB72B777B62008B502A /* ProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CA127CBC2B777DE5008B502A /* Components */,
+				CA127CB82B777B88008B502A /* ProfileScreen.swift */,
+			);
+			path = ProfileScreen;
+			sourceTree = "<group>";
+		};
+		CA127CBC2B777DE5008B502A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CA127CB52B76AAA6008B502A /* SignOutButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -278,6 +299,7 @@
 				CAA9D67E2B66940A0070D58D /* ContentView.swift */,
 				A4FBE1582B75637E00D2426A /* AuthenticationFlow */,
 				CAA9D6982B66B9DF0070D58D /* EditAlbumScreen */,
+				CA127CB72B777B62008B502A /* ProfileScreen */,
 				CAA9D6972B66B9CF0070D58D /* HomeScreen */,
 			);
 			path = Screens;
@@ -454,12 +476,14 @@
 				CA127CB42B76A518008B502A /* AuthButton.swift in Sources */,
 				CAA9D6942B66B8870070D58D /* EditAlbumScreen.swift in Sources */,
 				CA127CB62B76AAA6008B502A /* SignOutButton.swift in Sources */,
+				CA127CB92B777B88008B502A /* ProfileScreen.swift in Sources */,
 				CA127CAC2B769EE6008B502A /* SignUpScreen.swift in Sources */,
 				A4FBE1662B7572C000D2426A /* SignInScreen.swift in Sources */,
 				CAA9D6962B66B9540070D58D /* NewAlbumButton.swift in Sources */,
 				CAA9D67D2B66940A0070D58D /* DigitalbumApp.swift in Sources */,
 				CAA9D68E2B66AF220070D58D /* HomeScreen.swift in Sources */,
 				CA127CB02B76A503008B502A /* EmailTextField.swift in Sources */,
+				CA127CBB2B777B9E008B502A /* ProfileButton.swift in Sources */,
 				CA127CB22B76A50A008B502A /* PasswordTextField.swift in Sources */,
 				CA127CAA2B769E97008B502A /* AuthService.swift in Sources */,
 				CAA9D6922B66B32A0070D58D /* AlbumView.swift in Sources */,

@@ -11,7 +11,7 @@ struct HomeScreen: View {
     @State private var albumName = ""
     @State private var albums: [Album] = []
     @State private var showAlert = false
-    @State private var presentSignInScreen = false
+    @State private var presentProfileScreen = false
 
     private let columns = [
         GridItem(.flexible(), spacing: 16),
@@ -34,9 +34,8 @@ struct HomeScreen: View {
             ToolbarItem(placement: .topBarTrailing) {
                 NewAlbumButton(showAlert: $showAlert)
             }
-            // TODO: Move this Button to the Profile Screen, once it's created
-            ToolbarItem(placement: .topBarLeading) {
-                SignOutButton(presentSignInScreen: $presentSignInScreen)
+            ToolbarItem(placement: .topBarTrailing) {
+                ProfileButton(presentProfileScreen: $presentProfileScreen)
             }
         }
         .alert(
@@ -52,8 +51,8 @@ struct HomeScreen: View {
             }
             TextField("Album Name", text: $albumName)
         }
-        .fullScreenCover(isPresented: $presentSignInScreen) {
-            SignInScreen()
+        .sheet(isPresented: $presentProfileScreen) {
+            ProfileScreen()
         }
     }
 }
