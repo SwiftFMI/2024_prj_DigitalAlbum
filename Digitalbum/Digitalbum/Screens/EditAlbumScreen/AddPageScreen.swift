@@ -8,11 +8,31 @@
 import SwiftUI
 
 struct AddPageScreen: View {
+    @Binding var album: Album
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Choose Page Layout")
+            .font(.title)
+            .padding(.vertical, 50)
+        VStack {
+            LayoutOptionButton(title: "Single Image") {
+                album.pages.append(Page(layout: .single))
+            }
+            LayoutOptionButton(title: "Two Images") {
+                album.pages.append(Page(layout: .double))
+            }
+            LayoutOptionButton(title: "Four Images") {
+                album.pages.append(Page(layout: .twoByTwo))
+            }
+            LayoutOptionButton(title: "Four Images Cool") {
+                album.pages.append(Page(layout: .twoByTwoCool))
+            }
+        }
+        .padding()
+        Spacer()
     }
 }
 
 #Preview {
-    AddPageScreen()
+    AddPageScreen(album: .constant(Album(name: "My Album")))
 }

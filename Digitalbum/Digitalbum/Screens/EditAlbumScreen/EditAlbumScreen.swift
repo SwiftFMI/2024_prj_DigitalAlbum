@@ -10,7 +10,7 @@ import SwiftUI
 struct EditAlbumScreen: View {
     @State private var presentAddPageScreen = false
     @State private var presentAddNoteScreen = false
-    let album: Album
+    @State var album: Album
 
     var body: some View {
         ScrollView {
@@ -28,7 +28,7 @@ struct EditAlbumScreen: View {
             }
         }
         .sheet(isPresented: $presentAddPageScreen) {
-            AddPageScreen()
+            AddPageScreen(album: $album)
         }
         .sheet(isPresented: $presentAddNoteScreen) {
             AddNoteScreen()
@@ -38,6 +38,6 @@ struct EditAlbumScreen: View {
 
 #Preview {
     NavigationStack {
-        EditAlbumScreen(album: .init(name: "Dogs"))
+        EditAlbumScreen(album: Album(name: "Dogs"))
     }
 }
