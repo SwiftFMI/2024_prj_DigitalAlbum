@@ -13,15 +13,15 @@ struct EditAlbumScreen: View {
     @State var album: Album
 
     var body: some View {
-        ScrollView {
-            VStack {
-                PageView()
-                PageSlider()
-                AddNoteButton(presentAddNoteScreen: $presentAddNoteScreen)
-                NotesView()
+        ScrollView(.horizontal, showsIndicators: false) {
+            LazyHStack {
+                ForEach(album.pages) { page in
+                    PageContentView(presentAddNoteScreen: $presentAddNoteScreen)
+                }
             }
-            .padding()
+            .scrollTargetLayout()
         }
+        .scrollTargetBehavior(.viewAligned)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 AddPageButton(presentAddPageScreen: $presentAddPageScreen)
@@ -36,8 +36,28 @@ struct EditAlbumScreen: View {
     }
 }
 
+struct PageContentView: View {
+    @Binding var presentAddNoteScreen: Bool
+
+    var body: some View {
+        ScrollView {
+            VStack {
+                PageView()
+                AddNoteButton(presentAddNoteScreen: $presentAddNoteScreen)
+                NotesView()
+            }
+            .padding()
+        }
+        .frame(width: UIScreen.main.bounds.width)
+    }
+}
+
 #Preview {
     NavigationStack {
-        EditAlbumScreen(album: Album(name: "Dogs"))
+        EditAlbumScreen(album: Album(name: "Dogs", pages: [
+            .init(layout: .single),
+            .init(layout: .single),
+            .init(layout: .single),
+        ]))
     }
 }

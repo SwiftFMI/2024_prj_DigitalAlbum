@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// TODO: Delete, or implement
 struct PageSlider: View {
     var body: some View {
         Text("Page slider stub")

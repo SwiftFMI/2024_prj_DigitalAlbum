@@ -22,7 +22,8 @@ enum PageLayout {
     }
 }
 
-struct Page {
+struct Page: Identifiable {
+    let id = UUID().uuidString
     let layout: PageLayout
     var images: [Image] = []
     var notes: [Note] = []
