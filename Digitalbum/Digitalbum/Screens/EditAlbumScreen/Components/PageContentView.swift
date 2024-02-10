@@ -14,7 +14,7 @@ struct PageContentView: View {
     var body: some View {
         ScrollView {
             VStack {
-                PageView() // $page
+                PageView(page: $page)
                 AddNoteButton(presentAddNoteScreen: $presentAddNoteScreen)
                 NotesView()
             }

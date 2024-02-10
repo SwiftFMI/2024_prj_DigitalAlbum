@@ -11,7 +11,7 @@ struct EditAlbumScreen: View {
     @State private var presentAddPageScreen = false
     @State private var presentAddNoteScreen = false
     @StateObject var model: EditAlbumViewModel
-    
+
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack {
