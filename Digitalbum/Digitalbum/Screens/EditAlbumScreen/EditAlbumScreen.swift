@@ -42,9 +42,9 @@ struct EditAlbumScreen: View {
 
 #Preview {
     let album = Album(name: "Dogs", pages: [
-        .init(layout: .single),
-        .init(layout: .single),
-        .init(layout: .single)
+        .init(layout: .single, images: [Image("dog1"), Image("dog2"), Image("dog3"), Image("dog4")]),
+        .init(layout: .double, images: [Image("dog1"), Image("dog2"), Image("dog3"), Image("dog4")]),
+        .init(layout: .twoByTwo, images: [Image("dog1"), Image("dog2"), Image("dog3"), Image("dog4")]),
     ])
 
     return NavigationStack {

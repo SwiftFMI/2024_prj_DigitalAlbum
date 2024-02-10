@@ -11,38 +11,31 @@ struct PageView: View {
     @Binding var page: Page
 
     var body: some View {
-        ZStack {
-            Color.secondary
-                .frame(minWidth: 0, maxWidth: .infinity)
-                .frame(height: 500)
-                .cornerRadius(10)
+        content
+    }
 
-            switch page.layout {
-            case .single:
-                SinglePageLayout(image: page.images.first!)
-                    .padding()
-            case .double:
-                DoublePageLayout(images: page.images)
-                    .padding()
-            case .twoByTwo:
-                TwoByTwoLayout(images: page.images)
-                    .padding()
-            case .twoByTwoCool:
-                // TODO: Create the cool layout
-                TwoByTwoLayout(images: page.images)
-                    .padding()
-            }
-
+    @ViewBuilder
+    private var content: some View {
+        switch page.layout {
+        case .single:
+            SinglePageLayout(image: page.images.first!)
+        case .double:
+            DoublePageLayout(images: page.images)
+        case .twoByTwo:
+            TwoByTwoLayout(images: page.images)
+        case .twoByTwoCool:
+            // TODO: Create the cool layout
+            TwoByTwoLayout(images: page.images)
         }
     }
 }
 
 #Preview {
     PageView(page: .constant(Page(layout: .twoByTwo, images: [
-        Image(systemName: "house"),
-        Image(systemName: "person"),
-        Image(systemName: "plus"),
-        Image(systemName: "photo")
+        Image("dog1"),
+        Image("dog2"),
+        Image("dog3"),
+        Image("dog4")
     ])))
 }
 
@@ -51,8 +44,9 @@ struct SinglePageLayout: View {
 
     var body: some View {
         image
-            .border(.blue)
-            .frame(minWidth: 0, maxWidth: .infinity)
+            .resizable()
+            .scaledToFill()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
@@ -60,33 +54,45 @@ struct DoublePageLayout: View {
     let images: [Image]
 
     var body: some View {
-        VStack {
-            images[0]
-                .border(.blue)
-            images[1]
-                .border(.blue)
-        }
+            VStack {
+                images[0]
+                    .resizable()
+                    .scaledToFill()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+
+                images[1]
+                    .resizable()
+                    .scaledToFill()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            }
     }
 }
 
 struct TwoByTwoLayout: View {
     let images: [Image]
     private let columns = [
-        GridItem(.flexible(), spacing: 10),
-        GridItem(.flexible(), spacing: 10)
+        GridItem(.flexible()),
+        GridItem(.flexible())
     ]
 
     var body: some View {
         LazyVGrid(columns: columns) {
             images[0]
-                .border(.blue)
+                .resizable()
+                .scaledToFill()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
             images[1]
-                .border(.blue)
+                .resizable()
+                .scaledToFill()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
             images[2]
-                .border(.blue)
+                .resizable()
+                .scaledToFill()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
             images[3]
-                .border(.blue)
+                .resizable()
+                .scaledToFill()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        .frame(height: 500)
     }
 }
