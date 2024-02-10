@@ -22,7 +22,7 @@ struct HomeScreen: View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 16) {
                 ForEach(albums) { album in
-                    NavigationLink(destination: EditAlbumScreen(album: album)) {
+                    NavigationLink(destination: EditAlbumScreen(model: .init(album: album))) {
                         AlbumView(album: album)
                     }
                 }

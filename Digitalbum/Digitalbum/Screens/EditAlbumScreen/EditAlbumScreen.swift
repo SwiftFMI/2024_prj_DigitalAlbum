@@ -7,19 +7,11 @@
 
 import SwiftUI
 
-class EditAlbumViewModel: ObservableObject {
-    @Published var album: Album
-
-    init(album: Album) {
-        self.album = album
-    }
-}
-
 struct EditAlbumScreen: View {
     @State private var presentAddPageScreen = false
     @State private var presentAddNoteScreen = false
     @StateObject var model: EditAlbumViewModel
-
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack {
@@ -39,37 +31,23 @@ struct EditAlbumScreen: View {
             }
         }
         .sheet(isPresented: $presentAddPageScreen) {
-            AddPageScreen(album: $model.album)
+            AddPageScreen(album: $model.album, dismiss: $presentAddPageScreen)
         }
         .sheet(isPresented: $presentAddNoteScreen) {
             AddNoteScreen()
         }
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
-struct PageContentView: View {
-    @Binding var presentAddNoteScreen: Bool
-    @Binding var page: Page
+#Preview {
+    let album = Album(name: "Dogs", pages: [
+        .init(layout: .single),
+        .init(layout: .single),
+        .init(layout: .single)
+    ])
 
-    var body: some View {
-        ScrollView {
-            VStack {
-                PageView() // $page
-                AddNoteButton(presentAddNoteScreen: $presentAddNoteScreen)
-                NotesView()
-            }
-            .padding()
-        }
-        .frame(width: UIScreen.main.bounds.width)
+    return NavigationStack {
+        EditAlbumScreen(model: .init(album: album))
     }
 }
-
-//#Preview {
-//    NavigationStack {
-//        EditAlbumScreen(album: Album(name: "Dogs", pages: [
-//            .init(layout: .single),
-//            .init(layout: .single),
-//            .init(layout: .single),
-//        ]))
-//    }
-//}

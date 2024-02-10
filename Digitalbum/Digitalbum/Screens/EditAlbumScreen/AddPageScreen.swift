@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AddPageScreen: View {
     @Binding var album: Album
+    @Binding var dismiss: Bool
 
     var body: some View {
         Text("Choose Page Layout")
@@ -17,15 +18,19 @@ struct AddPageScreen: View {
         VStack {
             LayoutOptionButton(title: "Single Image") {
                 album.pages.append(Page(layout: .single))
+                dismiss.toggle()
             }
             LayoutOptionButton(title: "Two Images") {
                 album.pages.append(Page(layout: .double))
+                dismiss.toggle()
             }
             LayoutOptionButton(title: "Four Images") {
                 album.pages.append(Page(layout: .twoByTwo))
+                dismiss.toggle()
             }
             LayoutOptionButton(title: "Four Images Cool") {
                 album.pages.append(Page(layout: .twoByTwoCool))
+                dismiss.toggle()
             }
         }
         .padding()
@@ -34,5 +39,5 @@ struct AddPageScreen: View {
 }
 
 #Preview {
-    AddPageScreen(album: .constant(Album(name: "My Album")))
+    AddPageScreen(album: .constant(Album(name: "My Album")), dismiss: .constant(false))
 }
