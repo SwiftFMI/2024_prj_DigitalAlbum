@@ -8,13 +8,35 @@
 import SwiftUI
 
 struct EditAlbumScreen: View {
+    @State private var presentAddPageScreen = false
+    @State private var presentAddNoteScreen = false
     let album: Album
 
     var body: some View {
-        Text(album.name)
+        ScrollView {
+            VStack {
+                PageView()
+                PageSlider()
+                AddNoteButton(presentAddNoteScreen: $presentAddNoteScreen)
+                NotesView()
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                AddPageButton(presentAddPageScreen: $presentAddPageScreen)
+            }
+        }
+        .sheet(isPresented: $presentAddPageScreen) {
+            AddPageScreen()
+        }
+        .sheet(isPresented: $presentAddNoteScreen) {
+            // present add notes screen
+        }
     }
 }
 
 #Preview {
-    EditAlbumScreen(album: .init(name: "Dogs"))
+    NavigationStack {
+        EditAlbumScreen(album: .init(name: "Dogs"))
+    }
 }
