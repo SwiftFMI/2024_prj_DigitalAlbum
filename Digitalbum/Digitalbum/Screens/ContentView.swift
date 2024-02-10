@@ -9,12 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationStack {
-            HomeScreen()
+        if AuthService.shared.userAuthenticated {
+            NavigationStack {
+                HomeScreen()
+            }
+
+        } else {
+            SignInScreen()
         }
     }
-}
-
-#Preview {
-    ContentView()
 }

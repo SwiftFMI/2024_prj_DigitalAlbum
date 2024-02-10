@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct HomeScreen: View {
-    @State private var showAlert = false
     @State private var albumName = ""
     @State private var albums: [Album] = []
+    @State private var showAlert = false
+    @State private var presentProfileScreen = false
 
     private let columns = [
         GridItem(.flexible(), spacing: 16),
@@ -21,7 +22,7 @@ struct HomeScreen: View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 16) {
                 ForEach(albums) { album in
-                    NavigationLink(destination: EditAlbumScreen(album: album)) {
+                    NavigationLink(destination: EditAlbumScreen(model: .init(album: album))) {
                         AlbumView(album: album)
                     }
                 }
@@ -32,6 +33,9 @@ struct HomeScreen: View {
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 NewAlbumButton(showAlert: $showAlert)
+            }
+            ToolbarItem(placement: .topBarTrailing) {
+                ProfileButton(presentProfileScreen: $presentProfileScreen)
             }
         }
         .alert(
@@ -46,6 +50,9 @@ struct HomeScreen: View {
                 albumName = ""
             }
             TextField("Album Name", text: $albumName)
+        }
+        .sheet(isPresented: $presentProfileScreen) {
+            ProfileScreen()
         }
     }
 }

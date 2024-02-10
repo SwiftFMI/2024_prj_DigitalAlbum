@@ -10,4 +10,5 @@ import SwiftUI
 struct Album: Identifiable {
     let id: String = UUID().uuidString
     var name: String
+    var pages: [Page] = []
 }

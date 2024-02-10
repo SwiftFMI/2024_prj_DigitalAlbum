@@ -8,13 +8,46 @@
 import SwiftUI
 
 struct EditAlbumScreen: View {
-    let album: Album
+    @State private var presentAddPageScreen = false
+    @State private var presentAddNoteScreen = false
+    @StateObject var model: EditAlbumViewModel
 
     var body: some View {
-        Text(album.name)
+        ScrollView(.horizontal, showsIndicators: false) {
+            LazyHStack {
+                ForEach($model.album.pages) { page in
+                    PageContentView(
+                        presentAddNoteScreen: $presentAddNoteScreen,
+                        page: page
+                    )
+                }
+            }
+            .scrollTargetLayout()
+        }
+        .scrollTargetBehavior(.viewAligned)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                AddPageButton(presentAddPageScreen: $presentAddPageScreen)
+            }
+        }
+        .sheet(isPresented: $presentAddPageScreen) {
+            AddPageScreen(album: $model.album, dismiss: $presentAddPageScreen)
+        }
+        .sheet(isPresented: $presentAddNoteScreen) {
+            AddNoteScreen()
+        }
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 #Preview {
-    EditAlbumScreen(album: .init(name: "Dogs"))
+    let album = Album(name: "Dogs", pages: [
+        .init(layout: .single, images: [Image("dog1"), Image("dog2"), Image("dog3"), Image("dog4")]),
+        .init(layout: .double, images: [Image("dog1"), Image("dog2"), Image("dog3"), Image("dog4")]),
+        .init(layout: .twoByTwo, images: [Image("dog1"), Image("dog2"), Image("dog3"), Image("dog4")]),
+    ])
+
+    return NavigationStack {
+        EditAlbumScreen(model: .init(album: album))
+    }
 }
