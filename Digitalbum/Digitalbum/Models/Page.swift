@@ -12,7 +12,7 @@ enum PageLayout {
     case double
     case twoByTwo
     case twoByTwoCool
-    
+
     var imageCount: Int {
         switch self {
         case .single: 1
@@ -25,4 +25,5 @@ enum PageLayout {
 struct Page {
     let layout: PageLayout
     var images: [Image] = []
+    var notes: [Note] = []
 }
