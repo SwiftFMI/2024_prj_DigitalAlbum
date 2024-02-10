@@ -9,7 +9,13 @@ import SwiftUI
 
 struct PageView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Page View")
+            .font(.title3)
+            .foregroundStyle(.white)
+            .frame(minWidth: 0, maxWidth: .infinity)
+            .frame(height: 500)
+            .background(Color.gray)
+            .cornerRadius(10)
     }
 }
 

@@ -82,6 +82,7 @@
 		CA127CC72B77845F008B502A /* PageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CC62B77845F008B502A /* PageSlider.swift */; };
 		CA127CC92B77846E008B502A /* AddNoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CC82B77846E008B502A /* AddNoteButton.swift */; };
 		CA127CCB2B77847A008B502A /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CCA2B77847A008B502A /* NotesView.swift */; };
+		CA127CCD2B778640008B502A /* AddNoteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CCC2B778640008B502A /* AddNoteScreen.swift */; };
 		CAA9D67D2B66940A0070D58D /* DigitalbumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9D67C2B66940A0070D58D /* DigitalbumApp.swift */; };
 		CAA9D67F2B66940A0070D58D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9D67E2B66940A0070D58D /* ContentView.swift */; };
 		CAA9D6812B66940B0070D58D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAA9D6802B66940B0070D58D /* Assets.xcassets */; };
@@ -111,6 +112,7 @@
 		CA127CC62B77845F008B502A /* PageSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSlider.swift; sourceTree = "<group>"; };
 		CA127CC82B77846E008B502A /* AddNoteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteButton.swift; sourceTree = "<group>"; };
 		CA127CCA2B77847A008B502A /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
+		CA127CCC2B778640008B502A /* AddNoteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteScreen.swift; sourceTree = "<group>"; };
 		CAA9D6792B66940A0070D58D /* Digitalbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Digitalbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA9D67C2B66940A0070D58D /* DigitalbumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalbumApp.swift; sourceTree = "<group>"; };
 		CAA9D67E2B66940A0070D58D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 				CA127CBF2B77827D008B502A /* Components */,
 				CAA9D6932B66B8870070D58D /* EditAlbumScreen.swift */,
 				CA127CBD2B778277008B502A /* AddPageScreen.swift */,
+				CA127CCC2B778640008B502A /* AddNoteScreen.swift */,
 			);
 			path = EditAlbumScreen;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				CA127CB62B76AAA6008B502A /* SignOutButton.swift in Sources */,
 				CA127CB92B777B88008B502A /* ProfileScreen.swift in Sources */,
 				CA127CAC2B769EE6008B502A /* SignUpScreen.swift in Sources */,
+				CA127CCD2B778640008B502A /* AddNoteScreen.swift in Sources */,
 				CA127CCB2B77847A008B502A /* NotesView.swift in Sources */,
 				CA127CC92B77846E008B502A /* AddNoteButton.swift in Sources */,
 				A4FBE1662B7572C000D2426A /* SignInScreen.swift in Sources */,

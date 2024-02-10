@@ -20,6 +20,7 @@ struct EditAlbumScreen: View {
                 AddNoteButton(presentAddNoteScreen: $presentAddNoteScreen)
                 NotesView()
             }
+            .padding()
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
@@ -30,7 +31,7 @@ struct EditAlbumScreen: View {
             AddPageScreen()
         }
         .sheet(isPresented: $presentAddNoteScreen) {
-            // present add notes screen
+            AddNoteScreen()
         }
     }
 }
