@@ -24,17 +24,20 @@ struct SignInScreen: View {
             VStack {
                 EmailTextField(email: $email)
                 PasswordTextField(password: $password)
-                AuthButton(title: "Sing In") {
-                    guard !email.isEmpty, !password.isEmpty else {
+                AuthButton(title: "Sign In") {
+                    Task {
+                        guard !email.isEmpty, !password.isEmpty else {
+                            showWrongCredentialsAlert.toggle()
                         return
                     }
-
-                    AuthService.shared.signIn(email: email, password: password)
-
-                    if AuthService.shared.userAuthenticated {
-                        presentHomeScreen.toggle()
-                    } else {
-                        showWrongCredentialsAlert.toggle()
+                        
+                        await AuthService.shared.signIn(email: email, password: password)
+                        
+                        if AuthService.shared.userAuthenticated {
+                            presentHomeScreen.toggle()
+                        } else {
+                            showWrongCredentialsAlert.toggle()
+                        }
                     }
                 }
                 .padding()

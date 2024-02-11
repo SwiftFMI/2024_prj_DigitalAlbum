@@ -24,17 +24,13 @@ struct AuthService {
     }
 
     @MainActor
-    func signIn(email: String, password: String) {
-        Task {
-            try? await auth.signIn(withEmail: email, password: password)
-        }
+    func signIn(email: String, password: String) async {
+         _ = try? await auth.signIn(withEmail: email, password: password)
     }
 
     @MainActor
-    func signUp(email: String, password: String) {
-        Task {
-            try? await auth.createUser(withEmail: email, password: password)
-        }
+    func signUp(email: String, password: String) async {
+         _ = try? await auth.createUser(withEmail: email, password: password)
     }
 
     @MainActor
