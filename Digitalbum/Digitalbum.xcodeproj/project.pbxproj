@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A44CE57F2B78316100315736 /* UserInfoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44CE57E2B78316100315736 /* UserInfoTextField.swift */; };
+		A44CE5812B78340F00315736 /* BirthdayTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44CE5802B78340F00315736 /* BirthdayTextField.swift */; };
 		A4FBE1662B7572C000D2426A /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE1652B7572C000D2426A /* SignInScreen.swift */; };
 		A4FBE16B2B7575C200D2426A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A4FBE16A2B7575C200D2426A /* FirebaseAnalytics */; };
 		A4FBE16D2B7575C200D2426A /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = A4FBE16C2B7575C200D2426A /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -101,6 +103,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A44CE57E2B78316100315736 /* UserInfoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTextField.swift; sourceTree = "<group>"; };
+		A44CE5802B78340F00315736 /* BirthdayTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayTextField.swift; sourceTree = "<group>"; };
 		A4FBE1652B7572C000D2426A /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
 		CA127CA62B769C7E008B502A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA127CA92B769E97008B502A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -239,6 +243,8 @@
 			children = (
 				CA127CAF2B76A503008B502A /* EmailTextField.swift */,
 				CA127CB12B76A50A008B502A /* PasswordTextField.swift */,
+				A44CE57E2B78316100315736 /* UserInfoTextField.swift */,
+				A44CE5802B78340F00315736 /* BirthdayTextField.swift */,
 				CA127CB32B76A518008B502A /* AuthButton.swift */,
 			);
 			path = Components;
@@ -526,6 +532,7 @@
 				CA127CB92B777B88008B502A /* ProfileScreen.swift in Sources */,
 				CA127CD12B778D9F008B502A /* LayoutOptionButton.swift in Sources */,
 				CA127CAC2B769EE6008B502A /* SignUpScreen.swift in Sources */,
+				A44CE5812B78340F00315736 /* BirthdayTextField.swift in Sources */,
 				CA127CCD2B778640008B502A /* AddNoteScreen.swift in Sources */,
 				CA127CCB2B77847A008B502A /* NotesView.swift in Sources */,
 				CA127CC92B77846E008B502A /* AddNoteButton.swift in Sources */,
@@ -533,6 +540,7 @@
 				CA127CC52B778455008B502A /* PageView.swift in Sources */,
 				CAA9D6962B66B9540070D58D /* NewAlbumButton.swift in Sources */,
 				CAA9D67D2B66940A0070D58D /* DigitalbumApp.swift in Sources */,
+				A44CE57F2B78316100315736 /* UserInfoTextField.swift in Sources */,
 				CAA9D68E2B66AF220070D58D /* HomeScreen.swift in Sources */,
 				CA127CB02B76A503008B502A /* EmailTextField.swift in Sources */,
 				CA127CBE2B778277008B502A /* AddPageScreen.swift in Sources */,
