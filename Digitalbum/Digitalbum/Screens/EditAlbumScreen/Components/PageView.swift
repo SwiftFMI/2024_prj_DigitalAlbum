@@ -24,14 +24,13 @@ struct PageView: View {
         case .twoByTwo:
             TwoByTwoLayout(images: page.images)
         case .twoByTwoCool:
-            // TODO: Create the cool layout
-            TwoByTwoLayout(images: page.images)
+            TwoByTwoCoolLayout(images: page.images)
         }
     }
 }
 
 #Preview {
-    PageView(page: .constant(Page(layout: .twoByTwo, images: [
+    PageView(page: .constant(Page(layout: .twoByTwoCool, images: [
         Image("dog1"),
         Image("dog2"),
         Image("dog3"),
@@ -93,6 +92,36 @@ struct TwoByTwoLayout: View {
                 .resizable()
                 .scaledToFill()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
+        }
+    }
+}
+struct TwoByTwoCoolLayout: View {
+    let images: [Image]
+    private let columns = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+    let gridWidth = UIScreen.main.bounds.width
+    var body: some View {
+        HStack{
+            VStack{
+                images[0]
+                    .resizable()
+                    .frame(maxWidth: gridWidth * 0.5, maxHeight: gridWidth * 0.5)
+                    .aspectRatio(contentMode: .fit)
+                images[1]
+                    .resizable()
+                    .frame(maxWidth: gridWidth * 0.5, maxHeight: gridWidth * 0.75)
+            }
+            VStack{
+                images[2]
+                    .resizable()
+                    .frame(maxWidth: gridWidth * 0.5, maxHeight: gridWidth * 0.75)
+                    .aspectRatio(contentMode: .fit)
+                images[3]
+                    .resizable()
+                    .frame(maxWidth: gridWidth * 0.5, maxHeight: gridWidth * 0.5)
+            }
         }
     }
 }
