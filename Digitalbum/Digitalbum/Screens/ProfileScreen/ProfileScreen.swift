@@ -8,21 +8,39 @@
 import SwiftUI
 
 struct ProfileScreen: View {
+    let user: UserProfileInfo = .init(
+        email: "mylittlepony@cool.com",
+        firstName: "Lightning",
+        lastName: "McQueen",
+        birthDate: Date(),
+        coolInfo: "I am a car that can talk, sleep and much, much more. Much more."
+    )
+
     @State private var presentSignInScreen = false
 
     var body: some View {
-        VStack(spacing: 150) {
-            Text("Profile Information")
-                .font(.title)
-            Text("Email: \(AuthService.shared.currentUserEmail)")
-                .font(.headline)
+        VStack {
+            ScrollView(showsIndicators: false) {
+                ProfileImage()
+                Text("Profile Information")
+                    .font(.title)
+
+                VStack(alignment: .leading) {
+                    UserInfoView(type: "Name", content: user.firstName + " " + user.lastName)
+                    UserInfoView(type: "Email", content: user.email)
+                    UserInfoView(type: "Date of Birth", content: user.birthDate.formatted(date: .abbreviated, time: .omitted))
+                    UserInfoView(type: "Bio", content: user.coolInfo)
+                }
+            }
+
+            Spacer()
             SignOutButton(presentSignInScreen: $presentSignInScreen)
+
         }
-        .padding(.vertical, 100)
+        .padding()
         .fullScreenCover(isPresented: $presentSignInScreen) {
             SignInScreen()
         }
-        Spacer()
     }
 }
 

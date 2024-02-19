@@ -15,6 +15,13 @@ struct ProfileButton: View {
             presentProfileScreen.toggle()
         } label: {
             Image(systemName: "person.circle")
+                .foregroundStyle(
+                    LinearGradient(
+                        colors: [.blue, .cyan],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                )
         }
     }
 }

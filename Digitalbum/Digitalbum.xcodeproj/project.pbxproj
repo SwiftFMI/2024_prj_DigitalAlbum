@@ -98,6 +98,9 @@
 		CAA9D6922B66B32A0070D58D /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9D6912B66B32A0070D58D /* AlbumView.swift */; };
 		CAA9D6942B66B8870070D58D /* EditAlbumScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9D6932B66B8870070D58D /* EditAlbumScreen.swift */; };
 		CAA9D6962B66B9540070D58D /* NewAlbumButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9D6952B66B9540070D58D /* NewAlbumButton.swift */; };
+		CABC86FF2B83EB5800AE5958 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABC86FE2B83EB5800AE5958 /* UserInfoView.swift */; };
+		CABC87012B83EB9100AE5958 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABC87002B83EB9100AE5958 /* ProfileImage.swift */; };
+		CABC87032B83EC3600AE5958 /* UserProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABC87022B83EC3600AE5958 /* UserProfileInfo.swift */; };
 		E7C08BA72B77C7950028910F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E7C08BA62B77C7950028910F /* FirebaseAnalytics */; };
 		E7C08BA92B77C7950028910F /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = E7C08BA82B77C7950028910F /* FirebaseAnalyticsOnDeviceConversion */; };
 		E7C08BAB2B77C7950028910F /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E7C08BAA2B77C7950028910F /* FirebaseAnalyticsSwift */; };
@@ -166,6 +169,9 @@
 		CAA9D6912B66B32A0070D58D /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
 		CAA9D6932B66B8870070D58D /* EditAlbumScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlbumScreen.swift; sourceTree = "<group>"; };
 		CAA9D6952B66B9540070D58D /* NewAlbumButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAlbumButton.swift; sourceTree = "<group>"; };
+		CABC86FE2B83EB5800AE5958 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		CABC87002B83EB9100AE5958 /* ProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
+		CABC87022B83EC3600AE5958 /* UserProfileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +327,8 @@
 			isa = PBXGroup;
 			children = (
 				CA127CB52B76AAA6008B502A /* SignOutButton.swift */,
+				CABC86FE2B83EB5800AE5958 /* UserInfoView.swift */,
+				CABC87002B83EB9100AE5958 /* ProfileImage.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -417,6 +425,7 @@
 				CAA9D68F2B66B31C0070D58D /* Album.swift */,
 				CA127CCE2B7787E0008B502A /* Page.swift */,
 				CA127CD22B77903D008B502A /* Note.swift */,
+				CABC87022B83EC3600AE5958 /* UserProfileInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -621,10 +630,12 @@
 				CA127CD32B77903D008B502A /* Note.swift in Sources */,
 				CA127CB92B777B88008B502A /* ProfileScreen.swift in Sources */,
 				CA127CD12B778D9F008B502A /* LayoutOptionButton.swift in Sources */,
+				CABC87032B83EC3600AE5958 /* UserProfileInfo.swift in Sources */,
 				CA127CAC2B769EE6008B502A /* SignUpScreen.swift in Sources */,
 				CA127CCD2B778640008B502A /* AddNoteScreen.swift in Sources */,
 				CA127CCB2B77847A008B502A /* NotesView.swift in Sources */,
 				CA127CC92B77846E008B502A /* AddNoteButton.swift in Sources */,
+				CABC87012B83EB9100AE5958 /* ProfileImage.swift in Sources */,
 				A4FBE1662B7572C000D2426A /* SignInScreen.swift in Sources */,
 				CA127CC52B778455008B502A /* PageView.swift in Sources */,
 				CAA9D6962B66B9540070D58D /* NewAlbumButton.swift in Sources */,
@@ -635,6 +646,7 @@
 				CA127CBB2B777B9E008B502A /* ProfileButton.swift in Sources */,
 				CA127CB22B76A50A008B502A /* PasswordTextField.swift in Sources */,
 				CA127CD72B779ECA008B502A /* PageContentView.swift in Sources */,
+				CABC86FF2B83EB5800AE5958 /* UserInfoView.swift in Sources */,
 				CA127CC72B77845F008B502A /* PageSlider.swift in Sources */,
 				CA127CC12B778289008B502A /* AddPageButton.swift in Sources */,
 				CA127CAA2B769E97008B502A /* AuthService.swift in Sources */,
