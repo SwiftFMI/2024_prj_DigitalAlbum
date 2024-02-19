@@ -13,8 +13,8 @@ struct AddNoteScreen: View {
     @State var userNoteBody: String = ""
     var body: some View {
         VStack {
-            AddNoteTextField(userNoteTitle: $userNoteTitle, userNoteBody: $userNoteBody)
-            AddNoteToArrayButton(notes: $notes, noteTitle: $userNoteTitle, noteBody: $userNoteBody)
+//            AddNoteTextField(userNoteTitle: $userNoteTitle, userNoteBody: $userNoteBody)
+//            AddNoteToArrayButton(notes: $notes, noteTitle: $userNoteTitle, noteBody: $userNoteBody)
         }
     }
 }

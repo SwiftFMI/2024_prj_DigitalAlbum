@@ -12,17 +12,16 @@ struct NotesView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             ForEach(notes, id: \.self) { note in
-                HStack{
+                HStack {
                     Text(note.title)
                         .foregroundColor(.primary)
                     Text(note.text)
                         .foregroundColor(.secondary)
                 }
-                
             }
         }
         .padding()
-        
+
         Spacer()
     }
 }

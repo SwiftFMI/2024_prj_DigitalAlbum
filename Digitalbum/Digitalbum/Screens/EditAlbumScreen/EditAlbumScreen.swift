@@ -21,7 +21,7 @@ struct EditAlbumScreen: View {
                         presentAddNoteScreen: $presentAddNoteScreen,
                         page: page
                     )
-                    selectedPageIndex += 1
+//                    selectedPageIndex += 1
                 }
             }
             .scrollTargetLayout()

@@ -15,14 +15,14 @@ struct SignUpScreen: View {
     @State private var infoAboutUser = ""
     @State private var userDateOfBirth = Date()
     @State private var showEmptyCredentialsAlert = false
-    
+
     var body: some View {
         VStack(spacing: 15) {
             Image("AppLogo")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 150, height: 150)
-            
+
             Form {
                 TextField(text: $email) {
                     Text("Email")
@@ -49,15 +49,15 @@ struct SignUpScreen: View {
                         showEmptyCredentialsAlert.toggle()
                         return
                     }
-                    
+
                     await AuthService.shared.signUp(email: email, password: password)
-                    
+
                     if AuthService.shared.userAuthenticated {
                         presentHomeScreen.toggle()
                     }
                 }
             }
-            
+
             Spacer()
         }
         .background(Color(.secondarySystemBackground))
@@ -74,6 +74,7 @@ struct SignUpScreen: View {
         }
     }
 }
+
 #Preview {
     SignUpScreen()
 }

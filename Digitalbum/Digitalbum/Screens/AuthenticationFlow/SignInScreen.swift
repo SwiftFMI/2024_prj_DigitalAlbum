@@ -28,11 +28,11 @@ struct SignInScreen: View {
                     Task {
                         guard !email.isEmpty, !password.isEmpty else {
                             showWrongCredentialsAlert.toggle()
-                        return
-                    }
-                        
+                            return
+                        }
+
                         await AuthService.shared.signIn(email: email, password: password)
-                        
+
                         if AuthService.shared.userAuthenticated {
                             presentHomeScreen.toggle()
                         } else {
