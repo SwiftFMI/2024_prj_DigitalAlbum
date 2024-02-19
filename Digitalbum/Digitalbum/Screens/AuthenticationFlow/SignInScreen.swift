@@ -41,7 +41,11 @@ struct SignInScreen: View {
                     }
                 }
                 .padding()
-                Button(action: { presentSignUpScreen.toggle() }) {
+
+                Button {
+                    presentSignUpScreen.toggle()
+
+                } label: {
                     Text("Create account")
                 }
             }

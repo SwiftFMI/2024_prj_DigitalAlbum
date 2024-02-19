@@ -39,6 +39,7 @@ struct SignUpScreen: View {
                     }
                     .datePickerStyle(.wheel)
                 }
+                .tint(.black)
                 TextField(text: $infoAboutUser) {
                     Text("Tell us something cool about youself!")
                 }
