@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct AddNoteScreen: View {
+    @Binding var notes: [Note]
+    @State var userNoteTitle: String = ""
+    @State var userNoteBody: String = ""
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            AddNoteTextField(userNoteTitle: $userNoteTitle, userNoteBody: $userNoteBody)
+            AddNoteToArrayButton(notes: $notes, noteTitle: $userNoteTitle, noteBody: $userNoteBody)
+        }
     }
 }
 
-#Preview {
-    AddNoteScreen()
-}
+// #Preview {
+//     AddNoteScreen()
+//}
