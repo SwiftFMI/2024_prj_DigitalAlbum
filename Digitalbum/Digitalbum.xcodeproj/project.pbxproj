@@ -404,9 +404,9 @@
 			children = (
 				CAA9D67E2B66940A0070D58D /* ContentView.swift */,
 				A4FBE1582B75637E00D2426A /* AuthenticationFlow */,
-				CAA9D6982B66B9DF0070D58D /* EditAlbumScreen */,
-				CA127CB72B777B62008B502A /* ProfileScreen */,
 				CAA9D6972B66B9CF0070D58D /* HomeScreen */,
+				CA127CB72B777B62008B502A /* ProfileScreen */,
+				CAA9D6982B66B9DF0070D58D /* EditAlbumScreen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
