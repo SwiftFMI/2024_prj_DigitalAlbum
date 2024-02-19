@@ -16,7 +16,7 @@ struct PageContentView: View {
             VStack {
                 PageView(page: $page)
                 AddNoteButton(presentAddNoteScreen: $presentAddNoteScreen)
-                NotesView()
+                NotesView(notes: page.notes)
             }
             .padding()
         }
