@@ -103,8 +103,8 @@ struct TwoByTwoCoolLayout: View {
     ]
     let gridWidth = UIScreen.main.bounds.width
     var body: some View {
-        HStack{
-            VStack{
+        HStack {
+            VStack {
                 images[0]
                     .resizable()
                     .frame(maxWidth: gridWidth * 0.5, maxHeight: gridWidth * 0.5)
@@ -113,7 +113,7 @@ struct TwoByTwoCoolLayout: View {
                     .resizable()
                     .frame(maxWidth: gridWidth * 0.5, maxHeight: gridWidth * 0.75)
             }
-            VStack{
+            VStack {
                 images[2]
                     .resizable()
                     .frame(maxWidth: gridWidth * 0.5, maxHeight: gridWidth * 0.75)
