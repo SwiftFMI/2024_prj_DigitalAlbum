@@ -10,7 +10,6 @@ import SwiftUI
 struct EditAlbumScreen: View {
     @State private var presentAddPageScreen = false
     @State private var presentAddNoteScreen = false
-    var selectedPageIndex: Int = 0
     @StateObject var model: EditAlbumViewModel
 
     var body: some View {
@@ -21,7 +20,6 @@ struct EditAlbumScreen: View {
                         presentAddNoteScreen: $presentAddNoteScreen,
                         page: page
                     )
-//                    selectedPageIndex += 1
                 }
             }
             .scrollTargetLayout()
@@ -36,8 +34,7 @@ struct EditAlbumScreen: View {
             AddPageScreen(album: $model.album, dismiss: $presentAddPageScreen)
         }
         .sheet(isPresented: $presentAddNoteScreen) {
-            AddNoteScreen(notes: $model.album.pages[selectedPageIndex].notes)
-
+//            AddNoteScreen(notes: $model.album.pages[selectedPageIndex].notes)
         }
         .navigationBarTitleDisplayMode(.inline)
     }

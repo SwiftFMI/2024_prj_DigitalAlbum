@@ -79,7 +79,6 @@
 		CA127CBE2B778277008B502A /* AddPageScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CBD2B778277008B502A /* AddPageScreen.swift */; };
 		CA127CC12B778289008B502A /* AddPageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CC02B778289008B502A /* AddPageButton.swift */; };
 		CA127CC52B778455008B502A /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CC42B778455008B502A /* PageView.swift */; };
-		CA127CC72B77845F008B502A /* PageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CC62B77845F008B502A /* PageSlider.swift */; };
 		CA127CC92B77846E008B502A /* AddNoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CC82B77846E008B502A /* AddNoteButton.swift */; };
 		CA127CCB2B77847A008B502A /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CCA2B77847A008B502A /* NotesView.swift */; };
 		CA127CCD2B778640008B502A /* AddNoteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CCC2B778640008B502A /* AddNoteScreen.swift */; };
@@ -149,7 +148,6 @@
 		CA127CBD2B778277008B502A /* AddPageScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPageScreen.swift; sourceTree = "<group>"; };
 		CA127CC02B778289008B502A /* AddPageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPageButton.swift; sourceTree = "<group>"; };
 		CA127CC42B778455008B502A /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
-		CA127CC62B77845F008B502A /* PageSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSlider.swift; sourceTree = "<group>"; };
 		CA127CC82B77846E008B502A /* AddNoteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteButton.swift; sourceTree = "<group>"; };
 		CA127CCA2B77847A008B502A /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		CA127CCC2B778640008B502A /* AddNoteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteScreen.swift; sourceTree = "<group>"; };
@@ -337,12 +335,35 @@
 			isa = PBXGroup;
 			children = (
 				CA127CC02B778289008B502A /* AddPageButton.swift */,
-				CA127CC42B778455008B502A /* PageView.swift */,
-				CA127CC62B77845F008B502A /* PageSlider.swift */,
 				CA127CC82B77846E008B502A /* AddNoteButton.swift */,
-				CA127CCA2B77847A008B502A /* NotesView.swift */,
-				CA127CD02B778D9F008B502A /* LayoutOptionButton.swift */,
 				CA127CD62B779ECA008B502A /* PageContentView.swift */,
+				CA127CC42B778455008B502A /* PageView.swift */,
+				CA127CCA2B77847A008B502A /* NotesView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		CA18B4C22B85304B00D8A8C0 /* AddNoteScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CA127CCC2B778640008B502A /* AddNoteScreen.swift */,
+			);
+			path = AddNoteScreen;
+			sourceTree = "<group>";
+		};
+		CA18B4C32B85306000D8A8C0 /* AddPageScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CA18B4C42B85307100D8A8C0 /* Components */,
+				CA127CBD2B778277008B502A /* AddPageScreen.swift */,
+			);
+			path = AddPageScreen;
+			sourceTree = "<group>";
+		};
+		CA18B4C42B85307100D8A8C0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CA127CD02B778D9F008B502A /* LayoutOptionButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -399,8 +420,6 @@
 			isa = PBXGroup;
 			children = (
 				CA127CBF2B77827D008B502A /* Components */,
-				CA127CCC2B778640008B502A /* AddNoteScreen.swift */,
-				CA127CBD2B778277008B502A /* AddPageScreen.swift */,
 				CAA9D6932B66B8870070D58D /* EditAlbumScreen.swift */,
 				CA127CD42B779E9D008B502A /* EditAlbumViewModel.swift */,
 			);
@@ -415,6 +434,8 @@
 				CAA9D6972B66B9CF0070D58D /* HomeScreen */,
 				CA127CB72B777B62008B502A /* ProfileScreen */,
 				CAA9D6982B66B9DF0070D58D /* EditAlbumScreen */,
+				CA18B4C32B85306000D8A8C0 /* AddPageScreen */,
+				CA18B4C22B85304B00D8A8C0 /* AddNoteScreen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -647,7 +668,6 @@
 				CA127CB22B76A50A008B502A /* PasswordTextField.swift in Sources */,
 				CA127CD72B779ECA008B502A /* PageContentView.swift in Sources */,
 				CABC86FF2B83EB5800AE5958 /* UserInfoView.swift in Sources */,
-				CA127CC72B77845F008B502A /* PageSlider.swift in Sources */,
 				CA127CC12B778289008B502A /* AddPageButton.swift in Sources */,
 				CA127CAA2B769E97008B502A /* AuthService.swift in Sources */,
 				CAA9D6922B66B32A0070D58D /* AlbumView.swift in Sources */,

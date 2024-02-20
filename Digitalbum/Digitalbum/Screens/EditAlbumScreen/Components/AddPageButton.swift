@@ -15,6 +15,13 @@ struct AddPageButton: View {
             presentAddPageScreen.toggle()
         } label: {
             Image(systemName: "plus")
+                .foregroundStyle(
+                    LinearGradient(
+                        colors: [.blue, .cyan],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                )
         }
     }
 }
