@@ -24,6 +24,7 @@ struct EditAlbumScreen: View {
             }
             .scrollTargetLayout()
         }
+        .ignoresSafeArea(edges: .bottom)
         .scrollTargetBehavior(.viewAligned)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
