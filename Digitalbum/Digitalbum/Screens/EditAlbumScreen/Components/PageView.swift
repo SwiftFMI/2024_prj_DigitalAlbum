@@ -11,7 +11,10 @@ struct PageView: View {
     @Binding var page: Page
 
     var body: some View {
-        content
+        RoundedRectangle(cornerRadius: 10)
+            .frame(height: UIScreen.main.bounds.height * 0.7)
+            .foregroundStyle(.cyan)
+            .shadow(radius: 10, x: 10, y: 10)
     }
 
     @ViewBuilder
