@@ -11,10 +11,15 @@ struct PageView: View {
     @Binding var page: Page
 
     var body: some View {
-        RoundedRectangle(cornerRadius: 10)
-            .frame(height: UIScreen.main.bounds.height * 0.7)
-            .foregroundStyle(.cyan)
-            .shadow(radius: 10, x: 10, y: 10)
+        ZStack {
+            RoundedRectangle(cornerRadius: 10)
+                .frame(height: UIScreen.main.bounds.height * 0.7)
+                .foregroundStyle(.cyan)
+                .shadow(radius: 10, x: 10, y: 10)
+                .opacity(0.3)
+
+//            SinglePageLayout(image: page.images.first!)
+        }
     }
 
     @ViewBuilder
@@ -34,7 +39,7 @@ struct PageView: View {
 
 #Preview {
     PageView(page: .constant(Page(layout: .twoByTwoCool, images: [
-        Image("dog1"),
+        Image("dog2"),
         Image("dog2"),
         Image("dog3"),
         Image("dog4")
@@ -47,8 +52,11 @@ struct SinglePageLayout: View {
     var body: some View {
         image
             .resizable()
-            .scaledToFill()
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+
+            .frame(height: UIScreen.main.bounds.height * 0.7 - 40)
+            .frame(width: UIScreen.main.bounds.height * 0.7 - 40)
+            .scaledToFit()
+            .cornerRadius(10)
     }
 }
 

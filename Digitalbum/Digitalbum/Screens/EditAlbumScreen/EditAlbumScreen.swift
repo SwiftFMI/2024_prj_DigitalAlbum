@@ -35,7 +35,7 @@ struct EditAlbumScreen: View {
             AddPageScreen(album: $model.album, dismiss: $presentAddPageScreen)
         }
         .sheet(isPresented: $presentAddNoteScreen) {
-//            AddNoteScreen(notes: $model.album.pages)
+            AddNoteScreen(isPresented: $presentAddNoteScreen)
         }
         .navigationBarTitleDisplayMode(.inline)
     }
@@ -44,9 +44,9 @@ struct EditAlbumScreen: View {
 #Preview {
     let album = Album(name: "Dogs", pages: [
         .init(layout: .single, images: [Image("dog1"), Image("dog2"), Image("dog3"), Image("dog4")], notes: [.init(title: "Good", text: "I really like this pciture, it remindes me of that time I was cool"), .init(title: "Second Thought", text: "On second thought, I been good looking ever since too. Hot damn!")]),
-        .init(layout: .double, images: [Image("dog1"), Image("dog2"), Image("dog3"), Image("dog4")]),
-        .init(layout: .twoByTwo, images: [Image("dog1"), Image("dog2"), Image("dog3"), Image("dog4")]),
-        .init(layout: .twoByTwoCool, images: [Image("dog1"), Image("dog2"), Image("dog3"), Image("dog4")])
+        .init(layout: .double, images: [Image("dog2"), Image("dog2"), Image("dog3"), Image("dog4")]),
+        .init(layout: .twoByTwo, images: [Image("dog3"), Image("dog2"), Image("dog3"), Image("dog4")]),
+        .init(layout: .twoByTwoCool, images: [Image("dog4"), Image("dog2"), Image("dog3"), Image("dog4")])
     ])
 
     return NavigationStack {

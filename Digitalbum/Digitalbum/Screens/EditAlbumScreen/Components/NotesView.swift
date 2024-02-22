@@ -33,7 +33,7 @@ struct NoteView: View {
             .foregroundStyle(.white)
             .frame(height: 200)
             .shadow(radius: 10, x: 10, y: 5)
-            
+
             VStack(alignment: .leading, spacing: 10) {
                 Text(note.title)
                     .font(.title)

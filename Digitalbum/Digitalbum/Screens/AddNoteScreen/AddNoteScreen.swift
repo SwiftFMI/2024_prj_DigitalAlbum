@@ -8,17 +8,31 @@
 import SwiftUI
 
 struct AddNoteScreen: View {
-    @Binding var notes: [Note]
-    @State var userNoteTitle: String = ""
-    @State var userNoteBody: String = ""
+    @Binding var isPresented: Bool
+    @State var title: String = ""
+    @State var noteBody: String = ""
+
     var body: some View {
         VStack {
-//            AddNoteTextField(userNoteTitle: $userNoteTitle, userNoteBody: $userNoteBody)
-//            AddNoteToArrayButton(notes: $notes, noteTitle: $userNoteTitle, noteBody: $userNoteBody)
+            TextField("Title", text: $title)
+                .font(.title)
+                .padding()
+
+            TextEditor(text: $noteBody)
+                .padding()
         }
+        .navigationBarItems(
+            leading: Button("Cancel") {
+                isPresented.toggle()
+            },
+            trailing: Button("Save") {
+                // Save note
+                isPresented.toggle()
+            }
+        )
     }
 }
 
-// #Preview {
-//     AddNoteScreen()
-//}
+ #Preview {
+     AddNoteScreen(isPresented: .constant(true))
+}
