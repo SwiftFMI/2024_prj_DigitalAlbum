@@ -67,6 +67,7 @@
 		A4FBE1DB2B757C4E00D2426A /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A4FBE1DA2B757C4E00D2426A /* FirebaseRemoteConfigSwift */; };
 		A4FBE1DD2B757C4E00D2426A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A4FBE1DC2B757C4E00D2426A /* FirebaseStorage */; };
 		A4FBE1DF2B757C4E00D2426A /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A4FBE1DE2B757C4E00D2426A /* FirebaseStorageCombine-Community */; };
+		CA0CFEC82B87A5AD009751FD /* EditPhotoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CFEC72B87A5AD009751FD /* EditPhotoScreen.swift */; };
 		CA127CA72B769C7E008B502A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA127CA62B769C7E008B502A /* GoogleService-Info.plist */; };
 		CA127CAA2B769E97008B502A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CA92B769E97008B502A /* AuthService.swift */; };
 		CA127CAC2B769EE6008B502A /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CAB2B769EE6008B502A /* SignUpScreen.swift */; };
@@ -136,6 +137,7 @@
 
 /* Begin PBXFileReference section */
 		A4FBE1652B7572C000D2426A /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
+		CA0CFEC72B87A5AD009751FD /* EditPhotoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhotoScreen.swift; sourceTree = "<group>"; };
 		CA127CA62B769C7E008B502A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA127CA92B769E97008B502A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		CA127CAB2B769EE6008B502A /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
@@ -282,6 +284,14 @@
 				CA127CAB2B769EE6008B502A /* SignUpScreen.swift */,
 			);
 			path = AuthenticationFlow;
+			sourceTree = "<group>";
+		};
+		CA0CFEC62B87A593009751FD /* EditPhotoScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CA0CFEC72B87A5AD009751FD /* EditPhotoScreen.swift */,
+			);
+			path = EditPhotoScreen;
 			sourceTree = "<group>";
 		};
 		CA127CA82B769E84008B502A /* Services */ = {
@@ -436,6 +446,7 @@
 				CAA9D6982B66B9DF0070D58D /* EditAlbumScreen */,
 				CA18B4C32B85306000D8A8C0 /* AddPageScreen */,
 				CA18B4C22B85304B00D8A8C0 /* AddNoteScreen */,
+				CA0CFEC62B87A593009751FD /* EditPhotoScreen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -672,6 +683,7 @@
 				CA127CAA2B769E97008B502A /* AuthService.swift in Sources */,
 				CAA9D6922B66B32A0070D58D /* AlbumView.swift in Sources */,
 				CAA9D6902B66B31C0070D58D /* Album.swift in Sources */,
+				CA0CFEC82B87A5AD009751FD /* EditPhotoScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,7 +20,7 @@ struct AlbumView: View {
             )
             .cornerRadius(10)
             VStack {
-                Image(systemName: "photo")
+                Image(systemName: "photo.on.rectangle.angled")
                     .resizable()
                     .scaledToFit()
                     .foregroundStyle(.white)
