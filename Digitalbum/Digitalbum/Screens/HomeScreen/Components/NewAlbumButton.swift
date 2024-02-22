@@ -15,6 +15,13 @@ struct NewAlbumButton: View {
             showAlert.toggle()
         } label: {
             Image(systemName: "plus")
+                .foregroundStyle(
+                    LinearGradient(
+                        colors: [.blue, .cyan],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                )
         }
     }
 }

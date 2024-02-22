@@ -14,13 +14,20 @@ struct AddNoteButton: View {
         Button {
             presentAddNoteScreen.toggle()
         } label: {
-            Text("+ Add Note")
-                .font(.title3)
-                .foregroundStyle(.white)
-                .frame(minWidth: 0, maxWidth: .infinity)
-                .frame(height: 50)
-                .background(Color.green)
+            ZStack {
+                LinearGradient(
+                    colors: [.green, .cyan],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
                 .cornerRadius(10)
+                .frame(height: 50)
+
+                Text("+ Add Note")
+                    .font(.title3)
+                    .foregroundStyle(.white)
+            }
+            .shadow(radius: 10, x: 10, y: 10)
         }
     }
 }

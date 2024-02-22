@@ -27,8 +27,8 @@ struct HomeScreen: View {
                     }
                 }
             }
+            .padding()
         }
-        .padding()
         .navigationTitle("Your Albums")
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {

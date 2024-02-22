@@ -9,21 +9,36 @@ import SwiftUI
 
 struct AlbumView: View {
     let album: Album
+    @State private var isAnimating = false
 
     var body: some View {
-        VStack {
-            ZStack {
-                RoundedRectangle(cornerRadius: 4)
-                    .fill(.blue)
-                Image(systemName: "photo")
+        ZStack {
+            LinearGradient(
+                colors: [.blue, .cyan],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .cornerRadius(10)
+            VStack {
+                Image(systemName: "photo.on.rectangle.angled")
+                    .resizable()
+                    .scaledToFit()
                     .foregroundStyle(.white)
+
+                Text(album.name)
+                    .foregroundStyle(.white)
+                    .font(.title)
+                    .bold()
+
+                Spacer()
             }
-            Text(album.name)
+            .padding()
         }
+        .shadow(radius: 10, x: 10, y: 10)
         .frame(minHeight: 200)
     }
 }
 
 #Preview {
-    AlbumView(album: .init(name: "Dogs"))
+    AlbumView(album: .init(name: "My cool album"))
 }
