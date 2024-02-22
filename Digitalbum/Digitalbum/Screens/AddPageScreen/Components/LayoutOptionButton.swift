@@ -13,13 +13,21 @@ struct LayoutOptionButton: View {
 
     var body: some View {
         Button(action: action) {
-            Text(title)
-                .font(.title3)
-                .foregroundStyle(.white)
-                .frame(minWidth: 0, maxWidth: .infinity)
-                .frame(height: 50)
-                .background(Color.orange)
+            ZStack {
+                LinearGradient(
+                    colors: [.orange, .red],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
                 .cornerRadius(10)
+                .frame(height: 50)
+
+                Text(title)
+                    .font(.title3)
+                    .bold()
+                    .foregroundStyle(.white)
+            }
+
         }
     }
 }
