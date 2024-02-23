@@ -50,6 +50,7 @@ struct HomeScreen: View {
                 albumName = ""
             }
             TextField("Album Name", text: $albumName)
+                .disableAutocorrection(true)
         }
         .sheet(isPresented: $presentProfileScreen) {
             ProfileScreen()

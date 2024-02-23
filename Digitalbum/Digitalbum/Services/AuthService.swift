@@ -6,6 +6,7 @@
 //
 
 import FirebaseAuth
+import FirebaseStorage
 
 struct AuthService {
     /// Singleton instance
@@ -31,6 +32,21 @@ struct AuthService {
     @MainActor
     func signUp(email: String, password: String) async {
          _ = try? await auth.createUser(withEmail: email, password: password)
+        
+        if let userId = auth.currentUser?.uid {
+            createFolderForUser(userId: userId)
+        }
+            
+        func createFolderForUser(userId: String) {
+            let storageRef = Storage.storage().reference()
+            let userAlbumsRef = storageRef.child("users").child(userId).child("albums")
+            
+            userAlbumsRef.putData(Data(), metadata: nil) { metadata, error in
+                if let error = error {
+                    fatalError("Error creating albums folder for user \(userId): \(error.localizedDescription)")
+                }
+            }
+        }
     }
 
     @MainActor

@@ -11,19 +11,6 @@ struct PageView: View {
     @Binding var page: Page
 
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 10)
-                .frame(height: UIScreen.main.bounds.height * 0.7)
-                .foregroundStyle(.cyan)
-                .shadow(radius: 10, x: 10, y: 10)
-                .opacity(0.3)
-
-//            SinglePageLayout(image: page.images.first!)
-        }
-    }
-
-    @ViewBuilder
-    private var content: some View {
         switch page.layout {
         case .single:
             SinglePageLayout(image: page.images.first!)
@@ -38,11 +25,11 @@ struct PageView: View {
 }
 
 #Preview {
-    PageView(page: .constant(Page(layout: .twoByTwoCool, images: [
-        Image("dog2"),
-        Image("dog2"),
-        Image("dog3"),
-        Image("dog4")
+    PageView(page: .constant(Page(layout: .single, images: [
+        Image("dog1")
+//        Image("dog2"),
+//        Image("dog3"),
+//        Image("Placeholder")
     ])))
 }
 
@@ -52,11 +39,12 @@ struct SinglePageLayout: View {
     var body: some View {
         image
             .resizable()
-
-            .frame(height: UIScreen.main.bounds.height * 0.7 - 40)
-            .frame(width: UIScreen.main.bounds.height * 0.7 - 40)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
             .scaledToFit()
             .cornerRadius(10)
+            .onTapGesture {
+                photoAction(photo: image)
+            }
     }
 }
 
@@ -134,5 +122,12 @@ struct TwoByTwoCoolLayout: View {
                     .frame(maxWidth: gridWidth * 0.5, maxHeight: gridWidth * 0.5)
             }
         }
+    }
+}
+func photoAction (photo : Image) {
+    if photo == Image("Placeholder") {
+        //Photopicker
+    } else {
+        EditPhotoView(image: .constant(photo))
     }
 }

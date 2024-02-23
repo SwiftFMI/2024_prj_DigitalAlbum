@@ -15,6 +15,7 @@ struct SignUpScreen: View {
     @State private var infoAboutUser = ""
     @State private var userDateOfBirth = Date()
     @State private var showEmptyCredentialsAlert = false
+    @State private var showEmailInUseAlert = false
 
     var body: some View {
         VStack(spacing: 15) {
@@ -24,15 +25,9 @@ struct SignUpScreen: View {
                 .frame(width: 150, height: 150)
 
             Form {
-                TextField(text: $email) {
-                    Text("Email")
-                }
-                TextField(text: $password) {
-                    Text("Password")
-                }
-                TextField(text: $userName) {
-                    Text("First and Last Name")
-                }
+                EmailTextField(email: $email)
+                PasswordTextField(password: $password)
+                UserNamesTextField(userNames: $userName)
                 DisclosureGroup("Birth Date") {
                     DatePicker(selection: $userDateOfBirth, displayedComponents: .date) {
                         Text("Date of Birth")
@@ -40,9 +35,7 @@ struct SignUpScreen: View {
                     .datePickerStyle(.wheel)
                 }
                 .tint(.black)
-                TextField(text: $infoAboutUser) {
-                    Text("Tell us something cool about youself!")
-                }
+                UserInfoTextField(userInfo: $infoAboutUser)
             }
             AuthButton(title: "Create Account") {
                 Task {
@@ -55,6 +48,9 @@ struct SignUpScreen: View {
 
                     if AuthService.shared.userAuthenticated {
                         presentHomeScreen.toggle()
+                    } else {
+                        showEmailInUseAlert.toggle()
+                        return
                     }
                 }
             }
@@ -70,6 +66,12 @@ struct SignUpScreen: View {
         .alert(isPresented: $showEmptyCredentialsAlert) {
             Alert(
                 title: Text("Empty Email or Passowrd"),
+                message: nil,
+                dismissButton: .default(Text("Try Again")))
+        }
+        .alert(isPresented: $showEmailInUseAlert) {
+            Alert(
+                title: Text("Email already in use, try again!"),
                 message: nil,
                 dismissButton: .default(Text("Try Again")))
         }
