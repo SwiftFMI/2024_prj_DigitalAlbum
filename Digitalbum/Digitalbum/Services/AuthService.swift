@@ -23,6 +23,9 @@ struct AuthService {
     var currentUserEmail: String {
         auth.currentUser?.email ?? "unknown"
     }
+    var currentUserUID: String {
+        auth.currentUser?.uid ?? "unknown"
+    }
 
     @MainActor
     func signIn(email: String, password: String) async {
@@ -48,6 +51,7 @@ struct AuthService {
             }
         }
     }
+    
 
     @MainActor
     func signUserOut() {

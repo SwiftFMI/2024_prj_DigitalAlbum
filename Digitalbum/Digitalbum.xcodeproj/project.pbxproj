@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A42D80952B8857AF00B3A96A /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42D80942B8857AF00B3A96A /* PasswordTextField.swift */; };
 		A4452F302B87D3E600517267 /* UserInfoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4452F2F2B87D3E600517267 /* UserInfoTextField.swift */; };
 		A4452F322B87D4E600517267 /* UserNamesTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4452F312B87D4E600517267 /* UserNamesTextField.swift */; };
 		A4452F352B88095600517267 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A4452F342B88095600517267 /* FirebaseAnalytics */; };
@@ -36,11 +37,11 @@
 		A4452F652B88095600517267 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A4452F642B88095600517267 /* FirebaseRemoteConfigSwift */; };
 		A4452F672B88095600517267 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A4452F662B88095600517267 /* FirebaseStorage */; };
 		A4452F692B88095600517267 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A4452F682B88095600517267 /* FirebaseStorageCombine-Community */; };
-		A4452F6D2B884E1000517267 /* EditAlbumScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4452F6C2B884E1000517267 /* EditAlbumScreen.swift */; };
-		A4452F6F2B884E1300517267 /* EditAlbumScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4452F6E2B884E1300517267 /* EditAlbumScreen.swift */; };
-		A4452F712B884E2F00517267 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4452F702B884E2F00517267 /* Page.swift */; };
-		A4452F732B884E5700517267 /* EditPhotoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4452F722B884E5700517267 /* EditPhotoScreen.swift */; };
 		A4452F7B2B884FFE00517267 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4452F7A2B884FFE00517267 /* PageView.swift */; };
+		A47ABCB62B88EE9100717058 /* UploadAlbumButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47ABCB52B88EE9100717058 /* UploadAlbumButton.swift */; };
+		A49AAEA52B88A36C001B8473 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49AAEA42B88A36C001B8473 /* Page.swift */; };
+		A49AAEA72B88A3A5001B8473 /* EditPhotoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49AAEA62B88A3A5001B8473 /* EditPhotoScreen.swift */; };
+		A49AAEA92B88A3E2001B8473 /* EditAlbumScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49AAEA82B88A3E2001B8473 /* EditAlbumScreen.swift */; };
 		A4FBE1662B7572C000D2426A /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FBE1652B7572C000D2426A /* SignInScreen.swift */; };
 		A4FBE16B2B7575C200D2426A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A4FBE16A2B7575C200D2426A /* FirebaseAnalytics */; };
 		A4FBE16D2B7575C200D2426A /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = A4FBE16C2B7575C200D2426A /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -105,7 +106,6 @@
 		CA127CAA2B769E97008B502A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CA92B769E97008B502A /* AuthService.swift */; };
 		CA127CAC2B769EE6008B502A /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CAB2B769EE6008B502A /* SignUpScreen.swift */; };
 		CA127CB02B76A503008B502A /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CAF2B76A503008B502A /* EmailTextField.swift */; };
-		CA127CB22B76A50A008B502A /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CB12B76A50A008B502A /* PasswordTextField.swift */; };
 		CA127CB42B76A518008B502A /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CB32B76A518008B502A /* AuthButton.swift */; };
 		CA127CB62B76AAA6008B502A /* SignOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CB52B76AAA6008B502A /* SignOutButton.swift */; };
 		CA127CB92B777B88008B502A /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA127CB82B777B88008B502A /* ProfileScreen.swift */; };
@@ -166,19 +166,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A42D80942B8857AF00B3A96A /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		A4452F2F2B87D3E600517267 /* UserInfoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTextField.swift; sourceTree = "<group>"; };
 		A4452F312B87D4E600517267 /* UserNamesTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNamesTextField.swift; sourceTree = "<group>"; };
-		A4452F6C2B884E1000517267 /* EditAlbumScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditAlbumScreen.swift; path = "../../../../../../../../Library/Messages/Attachments/0e/14/9231562B-2906-4FCE-91F6-F4F2C9E87DDE/EditAlbumScreen.swift"; sourceTree = "<group>"; };
-		A4452F6E2B884E1300517267 /* EditAlbumScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditAlbumScreen.swift; path = "../../../../../../../Library/Messages/Attachments/0e/14/9231562B-2906-4FCE-91F6-F4F2C9E87DDE/EditAlbumScreen.swift"; sourceTree = "<group>"; };
-		A4452F702B884E2F00517267 /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Page.swift; path = "../../../../../../Library/Messages/Attachments/31/01/F0C14DC9-C951-4D56-9FF3-57BC463431BF/Page.swift"; sourceTree = "<group>"; };
-		A4452F722B884E5700517267 /* EditPhotoScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditPhotoScreen.swift; path = "../../../../../../../Library/Messages/Attachments/a8/08/B0FEFFF3-F6E8-41FF-804E-D06784055336/EditPhotoScreen.swift"; sourceTree = "<group>"; };
 		A4452F7A2B884FFE00517267 /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		A47ABCB52B88EE9100717058 /* UploadAlbumButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadAlbumButton.swift; sourceTree = "<group>"; };
+		A49AAEA42B88A36C001B8473 /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		A49AAEA62B88A3A5001B8473 /* EditPhotoScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPhotoScreen.swift; sourceTree = "<group>"; };
+		A49AAEA82B88A3E2001B8473 /* EditAlbumScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditAlbumScreen.swift; path = Digitalbum/Screens/EditAlbumScreen.swift; sourceTree = SOURCE_ROOT; };
 		A4FBE1652B7572C000D2426A /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
 		CA127CA62B769C7E008B502A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA127CA92B769E97008B502A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		CA127CAB2B769EE6008B502A /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
 		CA127CAF2B76A503008B502A /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
-		CA127CB12B76A50A008B502A /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.xcfilelist; };
 		CA127CB32B76A518008B502A /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		CA127CB52B76AAA6008B502A /* SignOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutButton.swift; sourceTree = "<group>"; };
 		CA127CB82B777B88008B502A /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
@@ -349,7 +349,7 @@
 		CA0CFEC62B87A593009751FD /* EditPhotoScreen */ = {
 			isa = PBXGroup;
 			children = (
-				A4452F722B884E5700517267 /* EditPhotoScreen.swift */,
+				A49AAEA62B88A3A5001B8473 /* EditPhotoScreen.swift */,
 			);
 			path = EditPhotoScreen;
 			sourceTree = "<group>";
@@ -368,6 +368,7 @@
 				CAA9D6912B66B32A0070D58D /* AlbumView.swift */,
 				CAA9D6952B66B9540070D58D /* NewAlbumButton.swift */,
 				CA127CBA2B777B9E008B502A /* ProfileButton.swift */,
+				A47ABCB52B88EE9100717058 /* UploadAlbumButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -376,10 +377,10 @@
 			isa = PBXGroup;
 			children = (
 				CA127CAF2B76A503008B502A /* EmailTextField.swift */,
-				CA127CB12B76A50A008B502A /* PasswordTextField.swift */,
 				A4452F312B87D4E600517267 /* UserNamesTextField.swift */,
 				A4452F2F2B87D3E600517267 /* UserInfoTextField.swift */,
 				CA127CB32B76A518008B502A /* AuthButton.swift */,
+				A42D80942B8857AF00B3A96A /* PasswordTextField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -411,7 +412,6 @@
 				CA127CC82B77846E008B502A /* AddNoteButton.swift */,
 				CA127CD62B779ECA008B502A /* PageContentView.swift */,
 				CA127CCA2B77847A008B502A /* NotesView.swift */,
-				A4452F6C2B884E1000517267 /* EditAlbumScreen.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -493,8 +493,8 @@
 			isa = PBXGroup;
 			children = (
 				CA127CBF2B77827D008B502A /* Components */,
-				A4452F6E2B884E1300517267 /* EditAlbumScreen.swift */,
 				CA127CD42B779E9D008B502A /* EditAlbumViewModel.swift */,
+				A49AAEA82B88A3E2001B8473 /* EditAlbumScreen.swift */,
 			);
 			path = EditAlbumScreen;
 			sourceTree = "<group>";
@@ -517,7 +517,7 @@
 		CAA9D69A2B66B9FF0070D58D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A4452F702B884E2F00517267 /* Page.swift */,
+				A49AAEA42B88A36C001B8473 /* Page.swift */,
 				CAA9D68F2B66B31C0070D58D /* Album.swift */,
 				CA127CD22B77903D008B502A /* Note.swift */,
 				CABC87022B83EC3600AE5958 /* UserProfileInfo.swift */,
@@ -770,10 +770,10 @@
 				CAA9D67F2B66940A0070D58D /* ContentView.swift in Sources */,
 				CA127CB42B76A518008B502A /* AuthButton.swift in Sources */,
 				CA127CB62B76AAA6008B502A /* SignOutButton.swift in Sources */,
-				A4452F712B884E2F00517267 /* Page.swift in Sources */,
-				A4452F6D2B884E1000517267 /* EditAlbumScreen.swift in Sources */,
 				CA127CD52B779E9D008B502A /* EditAlbumViewModel.swift in Sources */,
+				A42D80952B8857AF00B3A96A /* PasswordTextField.swift in Sources */,
 				A4452F302B87D3E600517267 /* UserInfoTextField.swift in Sources */,
+				A47ABCB62B88EE9100717058 /* UploadAlbumButton.swift in Sources */,
 				CA127CD32B77903D008B502A /* Note.swift in Sources */,
 				CA127CB92B777B88008B502A /* ProfileScreen.swift in Sources */,
 				CA127CD12B778D9F008B502A /* LayoutOptionButton.swift in Sources */,
@@ -789,17 +789,17 @@
 				CAA9D6962B66B9540070D58D /* NewAlbumButton.swift in Sources */,
 				CAA9D67D2B66940A0070D58D /* DigitalbumApp.swift in Sources */,
 				CAA9D68E2B66AF220070D58D /* HomeScreen.swift in Sources */,
+				A49AAEA52B88A36C001B8473 /* Page.swift in Sources */,
 				CA127CB02B76A503008B502A /* EmailTextField.swift in Sources */,
 				CA127CBE2B778277008B502A /* AddPageScreen.swift in Sources */,
 				CA127CBB2B777B9E008B502A /* ProfileButton.swift in Sources */,
-				CA127CB22B76A50A008B502A /* PasswordTextField.swift in Sources */,
 				CA127CD72B779ECA008B502A /* PageContentView.swift in Sources */,
 				CABC86FF2B83EB5800AE5958 /* UserInfoView.swift in Sources */,
-				A4452F732B884E5700517267 /* EditPhotoScreen.swift in Sources */,
-				A4452F6F2B884E1300517267 /* EditAlbumScreen.swift in Sources */,
 				CA127CC12B778289008B502A /* AddPageButton.swift in Sources */,
 				CA127CAA2B769E97008B502A /* AuthService.swift in Sources */,
 				CAA9D6922B66B32A0070D58D /* AlbumView.swift in Sources */,
+				A49AAEA72B88A3A5001B8473 /* EditPhotoScreen.swift in Sources */,
+				A49AAEA92B88A3E2001B8473 /* EditAlbumScreen.swift in Sources */,
 				CAA9D6902B66B31C0070D58D /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
