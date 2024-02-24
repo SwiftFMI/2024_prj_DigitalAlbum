@@ -44,14 +44,13 @@ struct AuthService {
             let storageRef = Storage.storage().reference()
             let userAlbumsRef = storageRef.child("users").child(userId).child("albums")
             
-            userAlbumsRef.putData(Data(), metadata: nil) { metadata, error in
+            userAlbumsRef.putData(Data(), metadata: nil) { _, error in
                 if let error = error {
                     fatalError("Error creating albums folder for user \(userId): \(error.localizedDescription)")
                 }
             }
         }
     }
-    
 
     @MainActor
     func signUserOut() {

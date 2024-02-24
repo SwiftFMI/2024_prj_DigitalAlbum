@@ -37,10 +37,6 @@ struct AddPageScreen: View {
                     album.pages.append(Page(layout: .twoByTwo))
                     dismiss.toggle()
                 }
-//                LayoutOptionButton(title: "Four Images Cool") {
-//                    album.pages.append(Page(layout: .twoByTwoCool))
-//                    dismiss.toggle()
-//                }
             }
         }
         .padding(.vertical, 50)

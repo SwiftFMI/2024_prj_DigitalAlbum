@@ -131,6 +131,9 @@
 		CABC86FF2B83EB5800AE5958 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABC86FE2B83EB5800AE5958 /* UserInfoView.swift */; };
 		CABC87012B83EB9100AE5958 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABC87002B83EB9100AE5958 /* ProfileImage.swift */; };
 		CABC87032B83EC3600AE5958 /* UserProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABC87022B83EC3600AE5958 /* UserProfileInfo.swift */; };
+		CAFD5A052B89C8D20054F272 /* SinglePageLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFD5A042B89C8D20054F272 /* SinglePageLayout.swift */; };
+		CAFD5A072B89C8E20054F272 /* DoublePageLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFD5A062B89C8E20054F272 /* DoublePageLayout.swift */; };
+		CAFD5A092B89C8ED0054F272 /* TwoByTwoPageLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFD5A082B89C8ED0054F272 /* TwoByTwoPageLayout.swift */; };
 		E7C08BA72B77C7950028910F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E7C08BA62B77C7950028910F /* FirebaseAnalytics */; };
 		E7C08BA92B77C7950028910F /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = E7C08BA82B77C7950028910F /* FirebaseAnalyticsOnDeviceConversion */; };
 		E7C08BAB2B77C7950028910F /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E7C08BAA2B77C7950028910F /* FirebaseAnalyticsSwift */; };
@@ -205,6 +208,9 @@
 		CABC86FE2B83EB5800AE5958 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		CABC87002B83EB9100AE5958 /* ProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
 		CABC87022B83EC3600AE5958 /* UserProfileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileInfo.swift; sourceTree = "<group>"; };
+		CAFD5A042B89C8D20054F272 /* SinglePageLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePageLayout.swift; sourceTree = "<group>"; };
+		CAFD5A062B89C8E20054F272 /* DoublePageLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublePageLayout.swift; sourceTree = "<group>"; };
+		CAFD5A082B89C8ED0054F272 /* TwoByTwoPageLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoByTwoPageLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -408,7 +414,7 @@
 			isa = PBXGroup;
 			children = (
 				CA127CC02B778289008B502A /* AddPageButton.swift */,
-				A4452F7A2B884FFE00517267 /* PageView.swift */,
+				CAFD5A032B89C8C30054F272 /* PageView */,
 				CA127CC82B77846E008B502A /* AddNoteButton.swift */,
 				CA127CD62B779ECA008B502A /* PageContentView.swift */,
 				CA127CCA2B77847A008B502A /* NotesView.swift */,
@@ -523,6 +529,17 @@
 				CABC87022B83EC3600AE5958 /* UserProfileInfo.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CAFD5A032B89C8C30054F272 /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				A4452F7A2B884FFE00517267 /* PageView.swift */,
+				CAFD5A042B89C8D20054F272 /* SinglePageLayout.swift */,
+				CAFD5A062B89C8E20054F272 /* DoublePageLayout.swift */,
+				CAFD5A082B89C8ED0054F272 /* TwoByTwoPageLayout.swift */,
+			);
+			path = PageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -782,10 +799,13 @@
 				CA127CCD2B778640008B502A /* AddNoteScreen.swift in Sources */,
 				CA127CCB2B77847A008B502A /* NotesView.swift in Sources */,
 				CA127CC92B77846E008B502A /* AddNoteButton.swift in Sources */,
+				CAFD5A072B89C8E20054F272 /* DoublePageLayout.swift in Sources */,
+				CAFD5A052B89C8D20054F272 /* SinglePageLayout.swift in Sources */,
 				A4452F7B2B884FFE00517267 /* PageView.swift in Sources */,
 				A4452F322B87D4E600517267 /* UserNamesTextField.swift in Sources */,
 				CABC87012B83EB9100AE5958 /* ProfileImage.swift in Sources */,
 				A4FBE1662B7572C000D2426A /* SignInScreen.swift in Sources */,
+				CAFD5A092B89C8ED0054F272 /* TwoByTwoPageLayout.swift in Sources */,
 				CAA9D6962B66B9540070D58D /* NewAlbumButton.swift in Sources */,
 				CAA9D67D2B66940A0070D58D /* DigitalbumApp.swift in Sources */,
 				CAA9D68E2B66AF220070D58D /* HomeScreen.swift in Sources */,

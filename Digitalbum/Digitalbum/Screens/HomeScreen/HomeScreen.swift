@@ -43,7 +43,6 @@ struct HomeScreen: View {
             ToolbarItem(placement: .topBarTrailing) {
                 ProfileButton(presentProfileScreen: $presentProfileScreen)
             }
-            
         }
         .alert(
             Text("Create New Album"),
@@ -73,6 +72,7 @@ struct HomeScreen: View {
             ProfileScreen()
         }
     }
+
     func uploadAllAlbums() {
         let userId = AuthService.shared.currentUserUID
         if userId.isEmpty {
@@ -104,7 +104,6 @@ struct HomeScreen: View {
         }
     }
 
-
     func uploadPhoto(_ image: UIImage, to reference: StorageReference) {
         let userId = AuthService.shared.currentUserUID
         guard !userId.isEmpty else {
@@ -121,7 +120,7 @@ struct HomeScreen: View {
             return
         }
 
-        reference.putData(imageData, metadata: nil) { metadata, error in
+        reference.putData(imageData, metadata: nil) { _, error in
             if let error = error {
                 print("Error uploading photo: \(error.localizedDescription)")
             } else {
@@ -129,8 +128,6 @@ struct HomeScreen: View {
             }
         }
     }
-
-
 }
 
 #Preview {

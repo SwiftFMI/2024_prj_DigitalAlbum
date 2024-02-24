@@ -14,10 +14,11 @@ struct EditPhotoView: View {
     @State private var isShowingCrop = false
     @State private var isShowingFilter = false
     @State private var isShowingRotate = false
+    @State private var currentFilter = CIFilter.sepiaTone()
+    
     @Binding var image: Image
 
-    let context = CIContext()
-    @State private var currentFilter = CIFilter.sepiaTone()
+    private let context = CIContext()
 
     var body: some View {
         NavigationStack {
@@ -65,7 +66,6 @@ struct EditPhotoView: View {
 
                 ToolbarItem(placement: .bottomBar) {
                     Button("Filter") {
-//                        isShowingFilter.toggle()
                         applyFilter()
                     }
                 }
@@ -86,9 +86,9 @@ struct EditPhotoView: View {
     }
 }
 
-//#Preview {
-//    Color.white
-//        .sheet(isPresented: .constant(true)) {
-//            EditPhotoView()
-//    }
-//}
+#Preview {
+    Color.white
+        .sheet(isPresented: .constant(true)) {
+            EditPhotoView(image: .constant(Image("dog1")))
+    }
+}

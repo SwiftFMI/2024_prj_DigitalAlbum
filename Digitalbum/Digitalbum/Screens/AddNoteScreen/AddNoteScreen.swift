@@ -33,6 +33,6 @@ struct AddNoteScreen: View {
     }
 }
 
- #Preview {
+#Preview {
      AddNoteScreen(isPresented: .constant(true))
 }

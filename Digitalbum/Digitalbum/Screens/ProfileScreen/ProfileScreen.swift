@@ -13,7 +13,7 @@ struct ProfileScreen: View {
         firstName: "Lightning",
         lastName: "McQueen",
         birthDate: Date(),
-        coolInfo: "I am a car that can talk, sleep and much, much more. Much more."
+        coolInfo: "I am a car that can talk, sleep and repair roads."
     )
 
     @State private var presentSignInScreen = false
@@ -28,7 +28,9 @@ struct ProfileScreen: View {
                 VStack(alignment: .leading) {
                     UserInfoView(type: "Name", content: user.firstName + " " + user.lastName)
                     UserInfoView(type: "Email", content: user.email)
-                    UserInfoView(type: "Date of Birth", content: user.birthDate.formatted(date: .abbreviated, time: .omitted))
+                    UserInfoView(
+                        type: "Date of Birth",
+                        content: user.birthDate.formatted(date: .abbreviated, time: .omitted))
                     UserInfoView(type: "Bio", content: user.coolInfo)
                 }
             }

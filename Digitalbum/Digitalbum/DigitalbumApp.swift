@@ -22,8 +22,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct DigitalbumApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    
-    
+
     var body: some Scene {
         WindowGroup {
             ContentView()
